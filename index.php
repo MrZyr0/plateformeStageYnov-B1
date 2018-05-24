@@ -3,7 +3,7 @@
 
     $_SESSION["RacineServ"] = __DIR__;                                              // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
 
-    require_once($_SESSION["RacineServ"].'/src/php/lienbdd-offres.php');
+    require_once($_SESSION["RacineServ"].'/src/php/lienbdd.php');
 ?>
 
 
