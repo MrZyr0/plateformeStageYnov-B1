@@ -1,46 +1,49 @@
-# plateformeStage
-Ynov
+# plateformeStageYnov
 
-	## Contexte
+## Description
 
-Le projet est la crÈation díune liste `díoffres de stage inversÈes` qui aidera les entreprises ‡
-trouver des profils de stagiaire ou díalternant chez **Ynov**.
-PlutÙt que de demander aux entreprises de soumettre des offres de stages qui sont transmises aux Ètudiants, elles auront directement accËs
-‡ une liste de profil disponibles (ex : Stagiaire B1 en dÈveloppement webî) avec un descriptif des
-compÈtences acquises par les Ètudiants dans le **Campus d'Ynov Lyon**.
+Dans le cadre du dernier projet de l'ann√©e 2017-2018, l'√©cole **Ynov Campus de Lyon** demande aux √©tudiant **Ing√©Sup** de premi√®re ann√©e (**B1**) de cr√©er une plateforme **d'offres de stage invers√©es** qui aidera les entreprises √† trouver des profils de stagiaire ou d'alternant chez **Ynov**.
+Plut√¥t que de demander aux entreprises de soumettre des offres de stages qui sont transmises aux √©tudiants, elles auront directement acc√®s √† une liste de profil disponibles (ex : Stagiaire B1 en d√©veloppement web) avec un descriptif des comp√©tences acquises par les √©tudiants dans le **Campus d'Ynov Lyon**.
+Toute la classe des **B1** sont mobilis√©s en en concurence par groupe de 3. Le site le plus abouti et adapt√© au cahier des charges se v√©rra int√©gr√© au site du [Campus Ynov de Lyon](http://ynovlyon.com).
 
-	## Installation
+## Installation
 
-1. Installation clonner le rÈpo
-2. Installation des dÈpendances
-	1. Mettre ‡ jour ComposerPHP
-		* Ouvrir le dossier du repo ```cd chemin/du/repo```
-		* Installer les dÈpendences ```composer install```
-		
-3. Importer la base de donnÈe
+1. Installation clonner le r√©po
+2. Installation des d√©pendances
+	1. Mettre √† jour ComposerPHP
+		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
+		2. Installer les d√©pendences ```composer install```
+
+
+		  ![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
 
 
 
+3. Importer la base de donn√©e [SQL](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/docs/SQL/offre_stage_inverse.sql)
 
 
 
 
-	## RÙles
-
-* FonctionnalitÈs (PHP & SQL)
-	* **Gianni SCANTAMBURLO** _RÈfÈrent dans ce domaine_
-	* Julien SEIXAS
-
-* Ergonomie & Design
-	* **Julien BONNANFANT** _RÈfÈrent dans ce domaine_
-	* Julien SEIXAS
-
-* RÈfÈrencement (SEO)
-	* **SÈverine CULIANEZ** _RÈfÈrente dans ce domaine_
 
 
 
-	## Liens utiles
+
+## Roles
+
+* _Fonctionnalit√©s_ (**PHP** & **SQL**)
+	* **[Gianni SCANTAMBURLO](https://github.com/XDayonline)** _**R√©f√©rente dans ce domaine**_
+	* [Julien SEIXAS](https://github.com/MrZyr0)
+
+* _Ergonomie & Design_
+	* **[Julien BONNANFANT](#)** _R√©f√©rente dans ce domaine_
+	* [Julien SEIXAS](https://github.com/MrZyr0)
+
+* _R√©f√©rencement_ (**SEO**)
+	* **[S√©verine CULIANEZ](https://github.com/Severinec)** _**R√©f√©rente dans ce domaine**_
+
+
+
+## Liens utiles
 
 * [Trello](https://trello.com/b/97WtxYfl/plateformestageynov)
-* [Ynov](https://brand.ynov.com)
+* [Charte graphique d'Ynov](https://brand.ynov.com)
