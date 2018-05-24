@@ -2,7 +2,6 @@
 require_once('./src/php/lienbdd.php');
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -12,7 +11,9 @@ require_once('./src/php/lienbdd.php');
 </head>
 <body>
 <pre><?php
-    print  $bddoffres[1]['title'];
+    for ($i = 0;$i<count($bddskills);$i++) {
+        print  $bddskills[i]['title'];
+    }
     ?>
 </pre>
 </body>
