@@ -10,9 +10,9 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 1. Installation clonner le répo
 2. Installation des dépendances
-	A. Mettre à jour ComposerPHP
-		a. Ouvrir le dossier du repo ```cd chemin/du/repo```
-		b. Installer les dépendences ```composer install```
+	1. Mettre à jour ComposerPHP
+		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
+		2. Installer les dépendences ```composer install```
 
 
 		  ![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
