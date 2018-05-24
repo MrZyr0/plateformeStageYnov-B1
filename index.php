@@ -1,9 +1,15 @@
 <?php
-require_once('./src/php/lienbdd.php');
+    session_start();
+
+    $_SESSION["RacineServ"] = __DIR__;                                              // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
+
+    require_once($_SESSION["RacineServ"].'/src/php/lienbdd-offres.php');
 ?>
 
 
+
 <!DOCTYPE html>
+</html>
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
