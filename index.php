@@ -14,8 +14,6 @@
         <title></title>
     </head>
     <body>
-        <pre>
-            <?php print  $bddoffres[1]['title'];?>
-        </pre>
+        <pre><?=$bddoffres[1]['title']?></pre>
     </body>
 </html>
