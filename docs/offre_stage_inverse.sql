@@ -1,5 +1,3 @@
-SET foreign_key_checks = 0;
-
 DROP TABLE IF EXISTS `osi_offer`;
 
 CREATE TABLE `osi_offer` (
@@ -23,11 +21,7 @@ DROP TABLE IF EXISTS `osi_offer_skill`;
 
 CREATE TABLE `osi_offer_skill` (
   `offer_id` int(11) unsigned NOT NULL,
-  `skill_id` int(11) unsigned NOT NULL,
-  KEY `fk_offer_id` (`offer_id`),
-  KEY `fk_skill_id` (`skill_id`),
-  CONSTRAINT `fk_offer_id` FOREIGN KEY (`offer_id`) REFERENCES `osi_offer` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_skill_id` FOREIGN KEY (`skill_id`) REFERENCES `osi_skill` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  `skill_id` int(11) unsigned NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `osi_offer_skill` (`offer_id`, `skill_id`)
@@ -56,5 +50,3 @@ VALUES
 	(3,'SEO'),
 	(4,'Symfony'),
 	(5,'Node.js');
-
-SET foreign_key_checks = 1;

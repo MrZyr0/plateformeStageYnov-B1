@@ -1,0 +1,13 @@
+{
+    "name": "julien/plateforme-stage",
+    "type": "project",
+    "authors": [
+        {
+            "name": "julien",
+            "email": "julien.seixas@ynov.com"
+        }
+    ],
+    "require": {
+        "swiftmailer/swiftmailer": "^6.0"
+    }
+}
