@@ -12,9 +12,13 @@ Plutôt que de demander aux entreprises de soumettre des offres de stages qui so
 	1. Mettre à jour ComposerPHP
 		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
 		2. Installer les dépendences ```composer install```
-		  ![Image of Yaktocat](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
+
+
+		  ![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
+
+
+
 3. Importer la base de donnée
-	1. Ouvrir votre 
 
 
 
