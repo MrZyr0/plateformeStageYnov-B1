@@ -10,11 +10,11 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 1. Installation clonner le répo
 2. Installation des dépendances
-	1. Mettre à jour ComposerPHP
-		1. Ouvrir le dossier du repo ```batch
+	A. Mettre à jour ComposerPHP
+		a. Ouvrir le dossier du repo ```batch
 									cd chemin/du/repo
 									```
-		2. Installer les dépendences ```batch
+		b. Installer les dépendences ```batch
 									composer install
 									```
 
@@ -35,15 +35,15 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 ## Roles
 
 * _Fonctionnalités_ (**PHP** & **SQL**)
-	* **[Gianni SCANTAMBURLO](https://github.com/XDayonline)** _Référente dans ce domaine_
-	* Julien SEIXAS
+	* **[Gianni SCANTAMBURLO](https://github.com/XDayonline)** _**Référente dans ce domaine**_
+	* [Julien SEIXAS](https://github.com/MrZyr0)
 
 * _Ergonomie & Design_
 	* **[Julien BONNANFANT](#)** _Référente dans ce domaine_
-	* Julien SEIXAS
+	* [Julien SEIXAS](https://github.com/MrZyr0)
 
 * _Référencement_ (**SEO**)
-	* **[Séverine CULIANEZ](https://github.com/Severinec)** _Référente dans ce domaine_
+	* **[Séverine CULIANEZ](https://github.com/Severinec)** _**Référente dans ce domaine**_
 
 
 
