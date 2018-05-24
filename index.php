@@ -1,6 +1,9 @@
 <?php
-require_once('./src/lienbdd-offres.php');
+    require_once('./src/lienbdd-offres.php');
 ?>
+
+
+
 <!DOCTYPE html>
 </html>
 <html lang="en" dir="ltr">
