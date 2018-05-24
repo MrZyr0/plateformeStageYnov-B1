@@ -1,24 +1,30 @@
 # plateformeStageYnov
 
-## Contexte
+## Description
 
-Le projet est la création d''une liste `d'offres de stage inversées` qui aidera les entreprises à trouver des profils de stagiaire ou d'alternant chez **Ynov**.
+Dans le cadre du dernier projet de l'année 2017-2018, l'école **Ynov Campus de Lyon** demande aux étudiant **IngéSup** de première année (**B1**) de créer une plateforme `d'offres de stage inversées` qui aidera les entreprises à trouver des profils de stagiaire ou d'alternant chez **Ynov**.
 Plutôt que de demander aux entreprises de soumettre des offres de stages qui sont transmises aux étudiants, elles auront directement accès à une liste de profil disponibles (ex : Stagiaire B1 en développement web) avec un descriptif des compétences acquises par les étudiants dans le **Campus d'Ynov Lyon**.
+Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le site le plus abouti et adapté au cahier des charges se vérra intégré au site du ![Campus Ynov de Lyon](http://ynovlyon.com).
 
 ## Installation
 
 1. Installation clonner le répo
 2. Installation des dépendances
 	1. Mettre à jour ComposerPHP
-		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
-		2. Installer les dépendences ```composer install```
+		1. Ouvrir le dossier du repo ```batch
+									cd chemin/du/repo
+									```
+		2. Installer les dépendences ```batch
+									composer install
+									```
 
 
 		  ![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
 
 
 
-3. Importer la base de donnée
+3. Importer la base de donnée ![SQL](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/docs/SQL/offre_stage_inverse.sql)
+
 
 
 
@@ -29,7 +35,7 @@ Plutôt que de demander aux entreprises de soumettre des offres de stages qui so
 ## Roles
 
 * Fonctionnalités (PHP & SQL)
-	* **Gianni SCANTAMBURLO** _Référente dans ce domaine_
+	* **![Gianni SCANTAMBURLO](https://github.com/XDayonline)** _Référente dans ce domaine_
 	* Julien SEIXAS
 
 * Ergonomie & Design
@@ -37,7 +43,7 @@ Plutôt que de demander aux entreprises de soumettre des offres de stages qui so
 	* Julien SEIXAS
 
 * Référencement (SEO)
-	* **Séverine CULIANEZ** _Référente dans ce domaine_
+	* **![Séverine CULIANEZ](https://github.com/Severinec)** _Référente dans ce domaine_
 
 
 
