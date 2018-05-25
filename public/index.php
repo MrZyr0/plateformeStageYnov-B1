@@ -34,10 +34,14 @@ require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
                 print "<tr>";
                 print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
                 print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
-                print "</td>";
+                print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['period'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['from_date'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['to_date'] . "</td>" . "\n";
+                print "</tr>";
             }
-        ?>
+            ?>
         </tbody>
     </table>
 </body>
