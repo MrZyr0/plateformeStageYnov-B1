@@ -23,9 +23,10 @@ require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
             for ($i = 0; $i < count($bddoffres); $i++)
             {
                 print "<tr>";
-                print "<th>" . $bddoffres[$i]['title'] . "</th>" . "\n";
-                print "<th>" . "info" . "</th>" . "\n";
-                print "</tr>";
+                print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
+                print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
+                print "</td>";
             }
         ?>
         </tbody>
