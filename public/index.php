@@ -6,6 +6,8 @@ $_SESSION["RacineServ"] = dirname(dirname(__FILE__));; // Variable session pour 
 require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
@@ -13,14 +15,20 @@ require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
     <link rel="stylesheet" href="css/style.css">
     <title>Index</title>
 </head>
+
 <body>
-<tr>
-    <pre><?php
-        for ($i = 0; $i < count($bddoffres); $i++) {
-            print"<td>" . $bddoffres[$i]['title'] . "</td>";
-        }
+    <table>
+        <tbody>
+            <?php
+            for ($i = 0; $i < count($bddoffres); $i++)
+            {
+                print "<tr>";
+                print "<th>" . $bddoffres[$i]['title'] . "</th>" . "\n";
+                print "<th>" . "info" . "</th>" . "\n";
+                print "</tr>";
+            }
         ?>
-    </pre>
-</tr>
+        </tbody>
+    </table>
 </body>
 </html>
