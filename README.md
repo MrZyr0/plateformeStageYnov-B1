@@ -19,8 +19,7 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 
 
-					![composerInstallScreen](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
-
+![composerInstallScreen](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
 
 
 
