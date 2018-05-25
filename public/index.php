@@ -5,62 +5,69 @@ $_SESSION["RacineServ"] = dirname(dirname(__FILE__));; // Variable session pour 
 
 require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 
-if (isset ($_GET["tri"])) {
-    switch ($_GET["tri"]) {
+if (isset ($_GET["tri"]))
+{
+    switch ($_GET["tri"])
+    {
         case "offre":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY title;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY title;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
+
         case "type":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY type;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY type;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
+
         case "class":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY class;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY class;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
+
         case "periode":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY period;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY period;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
+
         case "debut":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY from_date;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY from_date;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
+
         case "fin":
             $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY to_date;
-        ");
+            SELECT *
+            FROM osi_offer
+            ORDER BY to_date;
+            ");
             $statement->execute();
             $bddoffres = $statement->fetchAll();
-            break;
+        break;
     }
 }
 ?>
@@ -71,11 +78,10 @@ if (isset ($_GET["tri"])) {
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Index</title>
+    <title>Lsite profils</title>
 </head>
 
 <body>
-<<<<<<< HEAD
 
     <div class="header">
 
@@ -113,57 +119,30 @@ if (isset ($_GET["tri"])) {
     <table class="offreTable">
         <tbody>
             <tr>
-                <th>Offre</th>
-                <th>Type</th>
-                <th>Niveau</th>
+                <th><a href="index.php?tri=offre">Offre</a></th>
+                <th><a href="index.php?tri=type">Type</a></th>
+                <th><a href="index.php?tri=niveau">Niveau</a></th>
                 <th>Description</th>
-                <th>Période</th>
-                <th>Date de début</th>
-                <th>Date de fin</th>
+                <th><a href="index.php?tri=periode">Période</a></th>
+                <th><a href="index.php?tri=debut">Date de début</a></th>
+                <th><a href="index.php?tri=fin">Date de fin</a></th>
             </tr>
+
             <?php
-            for ($i = 0; $i < count($bddoffres); $i++)
-            {
-                print "<tr>";
-                print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['period'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['from_date'] . "</td>" . "\n";
-                print "<td>" . $bddoffres[$i]['to_date'] . "</td>" . "\n";
-                print "</tr>";
-            }
+                for ($i = 0; $i < count($bddoffres); $i++)
+                {
+                    print "<tr>";
+                    print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['period'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['from_date'] . "</td>" . "\n";
+                    print "<td>" . $bddoffres[$i]['to_date'] . "</td>" . "\n";
+                    print "</tr>";
+                }
             ?>
         </tbody>
     </table>
-=======
-<table>
-    <tbody>
-    <tr>
-        <th><a href="index.php?tri=offre">Offre</a></th>
-        <th><a href="index.php?tri=type">Type</a></th>
-        <th><a href="index.php?tri=niveau">Niveau</a></th>
-        <th>Description</th>
-        <th><a href="index.php?tri=periode">Période</a></th>
-        <th><a href="index.php?tri=debut">Date de début</a></th>
-        <th><a href="index.php?tri=fin">Date de fin</a></th>
-    </tr>
-    <?php
-    for ($i = 0; $i < count($bddoffres); $i++) {
-        print "<tr>";
-        print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['period'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['from_date'] . "</td>" . "\n";
-        print "<td>" . $bddoffres[$i]['to_date'] . "</td>" . "\n";
-        print "</tr>";
-    }
-    ?>
-    </tbody>
-</table>
->>>>>>> b41c135c33050e8189b8359346766a8ea88c923a
 </body>
 </html>
