@@ -16,7 +16,7 @@
 <body>
 <pre><?php
     for ($i = 0;$i<count($bddskills);$i++) {
-        print  $bddskills[i]['title'];
+        print  $bddskills[$i]['title']."\n";
     }
     ?>
 </pre>
