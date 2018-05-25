@@ -15,7 +15,7 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 		2. Installer les dépendences ```composer install```
 
 
-		  ![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
+		  		![composerInstall](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
 
 
 
@@ -31,15 +31,15 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 ## Roles
 
 * _Fonctionnalités_ (**PHP** & **SQL**)
-	* **[Gianni SCANTAMBURLO](https://github.com/XDayonline)** _**Référente dans ce domaine**_
+	* **[Gianni SCANTAMBURLO](https://github.com/XDayonline)** _Référent dans ce domaine_
 	* [Julien SEIXAS](https://github.com/MrZyr0)
 
 * _Ergonomie & Design_
-	* **[Julien BONNANFANT](#)** _Référente dans ce domaine_
+	* **[Julien BONNANFANT](#)** _Référent dans ce domaine_
 	* [Julien SEIXAS](https://github.com/MrZyr0)
 
 * _Référencement_ (**SEO**)
-	* **[Séverine CULIANEZ](https://github.com/Severinec)** _**Référente dans ce domaine**_
+	* **[Séverine CULIANEZ](https://github.com/Severinec)** _Référente dans ce domaine_
 
 
 
