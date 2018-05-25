@@ -19,6 +19,15 @@ require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 <body>
     <table>
         <tbody>
+            <tr>
+                <th>Offre</th>
+                <th>Type</th>
+                <th>Niveau</th>
+                <th>Description</th>
+                <th>Période</th>
+                <th>Date de début</th>
+                <th>Date de fin</th>
+            </tr>
             <?php
             for ($i = 0; $i < count($bddoffres); $i++)
             {
