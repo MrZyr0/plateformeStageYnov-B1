@@ -17,7 +17,7 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 		2. Installer les dépendences ```composer install```
 
 
-		  		![composerInstallScreen](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
+![composerInstallScreen](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/public/img/screenInstall/composerInstall.PNG)
 
 
 
