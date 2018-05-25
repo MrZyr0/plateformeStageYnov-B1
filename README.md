@@ -12,7 +12,8 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 1. Installation clonner le répo
 2. Installation des dépendances
-	1. Mettre à jour ComposerPHP
+	1. Installer [composer](https://getcomposer.org/download/)
+	2. Installer des dépendances du projet
 		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
 		2. Installer les dépendences ```composer install```
 
