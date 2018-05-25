@@ -1,13 +1,13 @@
 <?php
     session_start();
 
-    $_SESSION["RacineServ"] = __DIR__; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
+    $_SESSION["RacineServ"] = dirname( dirname(__FILE__) );; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
 
     require_once($_SESSION["RacineServ"].'/src/php/lienbdd.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
