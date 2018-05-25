@@ -1,9 +1,9 @@
 <?php
-    session_start();
+session_start();
 
-    $_SESSION["RacineServ"] = dirname( dirname(__FILE__) );; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
+$_SESSION["RacineServ"] = dirname(dirname(__FILE__));; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
 
-    require_once($_SESSION["RacineServ"].'/src/php/lienbdd.php');
+require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,13 @@
     <title>Index</title>
 </head>
 <body>
-<pre><?php
-    for ($i = 0;$i<count($bddskills);$i++) {
-        print  $bddskills[$i]['title']."\n";
-    }
-    ?>
-</pre>
+<tr>
+    <pre><?php
+        for ($i = 0; $i < count($bddoffres); $i++) {
+            print"<td>" . $bddoffres[$i]['title'] . "</td>";
+        }
+        ?>
+    </pre>
+</tr>
 </body>
 </html>
