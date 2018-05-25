@@ -1,19 +1,24 @@
 <?php
     session_start();
 
-    $_SESSION["RacineServ"] = __DIR__;                                              // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
+    $_SESSION["RacineServ"] = __DIR__; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
 
     require_once($_SESSION["RacineServ"].'/src/php/lienbdd.php');
 ?>
 
-
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>Profil Ynov</title>
-    </head>
-    <body>
-        <pre><?=$bddoffres[1]['title']?></pre>
-    </body>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Index</title>
+</head>
+<body>
+<pre><?php
+    for ($i = 0;$i<count($bddskills);$i++) {
+        print  $bddskills[i]['title'];
+    }
+    ?>
+</pre>
+</body>
 </html>
