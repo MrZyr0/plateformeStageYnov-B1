@@ -29,6 +29,10 @@
             require_once($_SESSION["RacineServ"] . "/pages/recrutement.php");
         }
     }
+    if ($url[0] == "offre")
+    {
+        require_once($_SESSION["RacineServ"] . "/src/php/offre.php");
+    }
     else
     {
         require_once($_SESSION["RacineServ"] . "/pages/404.php");

@@ -1,6 +1,5 @@
 <?php
-session_start();
-require_once $_SESSION["RacineServ"] . '/vendor/autoload.php';
+require_once($_SESSION["RacineServ"] . "/vendor/autoload.php");
 
 // Create the Transport
 $transport = (new Swift_SmtpTransport('smtp.gmail.com', 465, 'ssl'))
