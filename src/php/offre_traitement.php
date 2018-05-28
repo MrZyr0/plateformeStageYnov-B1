@@ -12,9 +12,9 @@ $mailer = new Swift_Mailer($transport);
 
 // Create a message
 $message = (new Swift_Message('Contactez nos étudiants'))
-    ->setFrom(['stageynov@gmail.com' => 'Offres Ynov'])
-    ->setTo(['john.mysterio@hotmail.fr' => 'Gianni'])
-    ->setBody('Voici la liste de nos étudiants.');
+    ->setFrom(['stageynov@gmail.com'])
+    ->setTo([$_POST["email"] => $_POST["nom"]])
+    ->setBody("De l'entreprise ". $_POST["entreprise"] ." : \n" . $_POST["message"] . "\nContactez l'entreprise au " . $_POST["tel"]);
 
 // Send the message
 $result = $mailer->send($message);
