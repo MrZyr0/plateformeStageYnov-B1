@@ -74,19 +74,10 @@ if (isset ($_GET["tri"]))
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-<<<<<<< HEAD
-    <title>Lsite profils</title>
-=======
+    <title>Liste profils</title>
     <link rel="stylesheet" href="css/master.css">
     <title>Liste profils</title>
 </head>
->>>>>>> 57f42ed0abe5c2fa0d21963aa8c3c176a66937e7
-
-    <link rel="stylesheet" href="/css/master.css">
-
-    <script type="text/javascript" src="/js/slider.js";>
-
-    </script>
 
 <body>
     <header class="header">
