@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-$_SESSION["RacineServ"] = dirname(dirname(__FILE__));; // Variable session pour avoir des liens qui débutent par la racine du serveur dans tout les fichiers
-
-require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
+require_once('../src/php/lienbdd.php');
 
 if (isset ($_GET["tri"]))
 {
@@ -77,17 +75,20 @@ if (isset ($_GET["tri"]))
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
     <title>Lsite profils</title>
-</head>
+
+    <link rel="stylesheet" href="/css/master.css">
+
+    <script type="text/javascript" src="/js/slider.js";>
+
+    </script>
 
 <body>
+    <header class="header">
 
-    <div class="header">
+    </header>
 
-    </div>
-
-    <div class="filter">
+    <form class="filter" action="#" method="post">
         <div class="filter__skill">
             <input type="checkbox" name="filter__skill-1" value="PHP"></br>
             <input type="checkbox" name="filter__skill-2" value="Ergonomie"></br>
@@ -95,37 +96,34 @@ if (isset ($_GET["tri"]))
             <input type="checkbox" name="filter__skill-4" value="Symphony"></br>
             <input type="checkbox" name="filter__skill-5" value="Node.js"></br>
         </div>
+
         <div class="filter__type">
-            <input type="checkbox" name="filter__type-1" value="Stage">
-            <input type="checkbox" name="filter__type-2" value="Alternance">
+            <input type="checkbox" name="filter__type-1" value="Stage"></br>
+            <input type="checkbox" name="filter__type-2" value="Alternance"></br>
         </div>
+
         <div class="filter__level">
-            <input type="checkbox" name="filter__level-1" value="B1">
-            <input type="checkbox" name="filter__level-2" value="B2">
-            <input type="checkbox" name="filter__level-3" value="B3">
-            <input type="checkbox" name="filter__level-4" value="M1">
-            <input type="checkbox" name="filter__level-5" value="M2">
+            <input type="checkbox" name="filter__level-1" value="B1"></br>
+            <input type="checkbox" name="filter__level-2" value="B2"></br>
+            <input type="checkbox" name="filter__level-3" value="B3"></br>
+            <input type="checkbox" name="filter__level-4" value="M1"></br>
+            <input type="checkbox" name="filter__level-5" value="M2"></br>
         </div>
+
         <div class="filter_date">
-            <div data-role="rangeslider">
-                <label for="price-min">Price:</label>
-                <input type="range" name="price-min" id="price-min" value="200" min="0" max="1000">
-                <label for="price-max">Price:</label>
-                <input type="range" name="price-max" id="price-max" value="800" min="0" max="1000">
-            </div>
         </div>
-    </div>
+    </form>
 
     <table class="offreTable">
         <tbody>
             <tr>
-                <th><a href="index.php?tri=offre">Offre</a></th>
-                <th><a href="index.php?tri=type">Type</a></th>
-                <th><a href="index.php?tri=niveau">Niveau</a></th>
+                <th><a href="?tri=offre">Offre</a></th>
+                <th><a href="?tri=type">Type</a></th>
+                <th><a href="?tri=niveau">Niveau</a></th>
                 <th>Description</th>
-                <th><a href="index.php?tri=periode">Période</a></th>
-                <th><a href="index.php?tri=debut">Date de début</a></th>
-                <th><a href="index.php?tri=fin">Date de fin</a></th>
+                <th><a href="?tri=periode">Période</a></th>
+                <th><a href="?tri=debut">Date de début</a></th>
+                <th><a href="?tri=fin">Date de fin</a></th>
             </tr>
 
             <?php
