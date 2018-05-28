@@ -72,13 +72,12 @@ if (isset ($_GET["tri"]))
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Lsite profils</title>
+    <link rel="stylesheet" href="css/master.css">
+    <title>Liste profils</title>
 </head>
 
 <body>
@@ -132,7 +131,7 @@ if (isset ($_GET["tri"]))
                 for ($i = 0; $i < count($bddoffres); $i++)
                 {
                     print "<tr>";
-                    print "<td>" . $bddoffres[$i]['title'] . "</td>" . "\n";
+                    print "<td><a href=" . $_SESSION["RacineServ"] . "/src/php/offre.php >" . $bddoffres[$i]['title'] . "</a></td>" . "\n";
                     print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
