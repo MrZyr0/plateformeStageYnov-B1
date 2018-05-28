@@ -75,13 +75,14 @@ if (isset ($_GET["tri"]))
 <head>
     <meta charset="utf-8">
     <title>Liste profils</title>
-    <link rel="stylesheet" href="css/master.css">
-    <title>Liste profils</title>
+    <link rel="stylesheet" href="/css/master.css">
+    <script type="text/javascript" src="/js/slider.js"></script>
 </head>
 
 <body>
     <header class="header">
-
+        <a href="/"><img src="http://www.ynovlyon.com/wp-content/themes/ynov/assets/img/global/logo-ynov-white.png" alt="YNOV Lyon - Ynov Lyon"></a>
+        <a href="/"></a>
     </header>
 
     <form class="filter" action="#" method="post">
@@ -107,7 +108,15 @@ if (isset ($_GET["tri"]))
         </div>
 
         <div class="filter_date">
+            <div class="filter-date__begin">
+                <input type="date" max=<?= "2018-05-28" ?> min="2011-08-13" name="the_date">
+            </div>
+
+            <div class="filter-date__end">
+                <input type="date" max="2012-06-25" min="2011-08-13" name="the_date">
+            </div>
         </div>
+        <input type="submit" name="search" value="Rechercher">
     </form>
 
     <table class="offreTable">
