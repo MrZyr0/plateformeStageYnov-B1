@@ -126,10 +126,10 @@ if (isset ($_GET["tri"]))
                 for ($i = 0; $i < count($bddoffres); $i++)
                 {
                     print "<tr>";
-                    print "<td><a href=" . $_SESSION["RacineServ"] . "/src/php/offre.php >" . $bddoffres[$i]['title'] . "</a></td>" . "\n";
+                    print "<td><a href='/offre.php'>" . $bddoffres[$i]['title'] . "</a></td>" . "\n";
                     print "<td>" . $bddoffres[$i]['type'] . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['class'] . "</td>" . "\n";
-                    print "<td>" . $bddoffres[$i]['description'] . "</td>" . "\n";
+                    print "<td>" . mb_strimwidth($bddoffres[$i]['description'],0,200,'<a href=\'/offre\'>...</a>') . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['period'] . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['from_date'] . "</td>" . "\n";
                     print "<td>" . $bddoffres[$i]['to_date'] . "</td>" . "\n";
