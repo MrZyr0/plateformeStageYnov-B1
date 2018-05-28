@@ -1,7 +1,5 @@
 <?php
-session_start();
-
-require_once('../src/php/lienbdd.php');
+require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 
 if (isset ($_GET["tri"]))
 {
@@ -68,6 +66,7 @@ if (isset ($_GET["tri"]))
         break;
     }
 }
+
 ?>
 
 <!DOCTYPE html>
