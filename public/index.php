@@ -14,8 +14,15 @@
     {
         if (isset($url[1]))
         {
-            $idProfil = $url[2];
-            require_once($_SESSION["RacineServ"] . "/pages/profils.php");
+            if (isset($url[2]))
+            {
+                $idProfil = $url[2];
+                require_once($_SESSION["RacineServ"] . "/pages/profils.php");
+            }
+            else
+            {
+                require_once($_SESSION["RacineServ"] . "/pages/404.php");
+            }
         }
         if (isset($url[1]) == false)
         {
