@@ -34,12 +34,8 @@
             require_once($_SESSION["RacineServ"] . "/pages/recrutement.php");
         }
     }
-<<<<<<< HEAD
     else
     {
         require_once($_SESSION["RacineServ"] . "/pages/404.php");
     }
-
-=======
->>>>>>> 41748f231274151770f86c01533fb5ef4298bc80
 ?>
