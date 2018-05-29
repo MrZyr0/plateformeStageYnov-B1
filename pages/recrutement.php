@@ -89,9 +89,33 @@ if (isset ($_GET["tri"]))
 
     <form class="filter-form" action="#" method="post">
         <div class="filter-form__when">
-            <label class="filter-form__when__label" for="toggle-open"><p>Maintenant</p><img src="/img/icons/expand_arrow_64px.png" class="filter__when__label__arrow"></label>
-            <input id="toggle-open" name="toggle-open" type="checkbox" hidden/>
+            <p class="filter-form__when__label">Quand ?</p>
+            <select class="filter-form__when__select">
+                <option value="now" selected>Maintenant</option>
+                <option value="1m">dans 1 mois</option>
+                <option value="6m">dans 6 mois</option>
+                <option value="1y">dans 1 an</option>
+            </select>
+        </div>
 
+
+        <div class="filter-form__domain">
+            <p class="filter-form__domain__label">Quel domaine ?</p>
+            <select class="filter-form__domain__select">
+                <option value="info" selected>Informatique</option>
+                <option value="art">Art</option>
+                <option value="commercial">commercial</option>
+            </select>
+        </div>
+
+        <div class="filter-form__contract">
+            <p class="filter-form__contract__label">Quel contrat ?</p>
+            <select class="filter-form__contract__select">
+                <option value="stage" selected>Stage</option>
+                <option value="alternance">Alternance</option>
+                <option value="cdi">CDI</option>
+                <option value="cdd">CDD</option>
+            </select>
         </div>
 
         <input type="submit" name="search" value="Rechercher">

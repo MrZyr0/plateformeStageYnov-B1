@@ -34,38 +34,36 @@
     justify-content: space-around;
     align-items: center;
     background-color: #23b2a4;
-    padding: 50px;
-}
+    padding: 20px;
+    color: black;}
 
-.filter-form__when
-{
-    display: flex;
-    flex-flow: column nowrap;
-    text-align: center;
-
-    background-color: #FFF;
-    color: #000;
-    width: 250px;
-
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 2px 18px 32px -19px rgba(0,0,0,0.75);
-}
-
-.filter-form__when__label
+.filter-form__when, .filter-form__domain, .filter-form__contract
 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 
-    padding: 10px;
+    min-width: 280px;
 }
 
-.filter-form__when__label__arrow
+.filter-form__domain
 {
-    /* border-left: 2px solid rgb(171,167,171); */
+    min-width: 380px;
 }
-.filter-form__when label
+
+.filter-form__contract
 {
-    cursor:pointer;
+    min-width: 350px;
+}
+
+.filter-form__when__label, .filter-form__domain__label, .filter-form__contract__label
+{
+     font-size: 2em;
+}
+
+.filter-form__when__select, .filter-form__domain__select, .filter-form__contract__select
+{
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.5em;
 }
