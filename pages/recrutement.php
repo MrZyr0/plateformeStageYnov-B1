@@ -88,11 +88,11 @@ if (isset ($_GET["tri"]))
     </header>
 
     <form class="filter-form" action="#" method="post">
-        <span class="filter-form__when">
+        <div class="filter-form__when">
             <label class="filter-form__when__label" for="toggle-open"><p>Maintenant</p><img src="/img/icons/expand_arrow_64px.png" class="filter__when__label__arrow"></label>
             <input id="toggle-open" name="toggle-open" type="checkbox" hidden/>
 
-        </span>
+        </div>
 
         <input type="submit" name="search" value="Rechercher">
     </form>
