@@ -75,46 +75,25 @@ if (isset ($_GET["tri"]))
     <meta charset="utf-8">
     <title>Liste profils</title>
     <link rel="stylesheet" href="/css/master.css">
-    <script type="text/javascript" src="/js/slider.js"></script>
 </head>
 
 <body>
-    <header class="header">
+    <nav class="nav">
         <a href="/"><img src="http://www.ynovlyon.com/wp-content/themes/ynov/assets/img/global/logo-ynov-white.png" alt="YNOV Lyon - Ynov Lyon"></a>
         <a href="/"></a>
+    </nav>
+
+    <header class="header">
+        <img src="/img/background/atelier-293x125.jpg" alt="Image d'illustration de la page" class="header__illustration">
     </header>
 
-    <form class="filter" action="#" method="post">
-        <div class="filter__skill">
-            <input type="checkbox" name="filter__skill-1" value="PHP"></br>
-            <input type="checkbox" name="filter__skill-2" value="Ergonomie"></br>
-            <input type="checkbox" name="filter__skill-3" value="SEO"></br>
-            <input type="checkbox" name="filter__skill-4" value="Symphony"></br>
-            <input type="checkbox" name="filter__skill-5" value="Node.js"></br>
-        </div>
+    <form class="filter-form" action="#" method="post">
+        <span class="filter-form__when">
+            <label class="filter-form__when__label" for="toggle-open"><p>Maintenant</p><img src="/img/icons/expand_arrow_64px.png" class="filter__when__label__arrow"></label>
+            <input id="toggle-open" name="toggle-open" type="checkbox" hidden/>
 
-        <div class="filter__type">
-            <input type="checkbox" name="filter__type-1" value="Stage"></br>
-            <input type="checkbox" name="filter__type-2" value="Alternance"></br>
-        </div>
+        </span>
 
-        <div class="filter__level">
-            <input type="checkbox" name="filter__level-1" value="B1"></br>
-            <input type="checkbox" name="filter__level-2" value="B2"></br>
-            <input type="checkbox" name="filter__level-3" value="B3"></br>
-            <input type="checkbox" name="filter__level-4" value="M1"></br>
-            <input type="checkbox" name="filter__level-5" value="M2"></br>
-        </div>
-
-        <div class="filter_date">
-            <div class="filter-date__begin">
-                <input type="date" max=<?= "2018-05-28" ?> min="2011-08-13" name="the_date">
-            </div>
-
-            <div class="filter-date__end">
-                <input type="date" max="2012-06-25" min="2011-08-13" name="the_date">
-            </div>
-        </div>
         <input type="submit" name="search" value="Rechercher">
     </form>
 

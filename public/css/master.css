@@ -1,9 +1,65 @@
+.nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+
+    background-color: black;
+    padding: 5px;
+}
+
 .header
 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
-    padding: 5px;
+}
 
+.header__illustration
+{
+    width: -webkit-fill-available;
+}
+
+.filter-form
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23b2a4;
+    padding: 50px;
+}
+
+.filter-form__when
+{
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+
+    background-color: #FFF;
+    color: #000;
+    width: 250px;
+
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 2px 18px 32px -19px rgba(0,0,0,0.75);
+}
+
+.filter-form__when__label
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.filter-form__when__label__arrow
+{
+    /* border-left: 2px solid rgb(171,167,171); */
+}
+.filter-form__when label
+{
+    cursor:pointer;
 }

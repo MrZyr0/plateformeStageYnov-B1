@@ -17,6 +17,10 @@
             if (isset($url[2]))
             {
                 $idProfil = $url[2];
+                if($url[3] == "contact")
+                {
+                    require_once($_SESSION[RacineServ] . "/pages/offre_traitement.php");
+                }
                 require_once($_SESSION["RacineServ"] . "/pages/profils.php");
             }
             else
@@ -28,10 +32,6 @@
         {
             require_once($_SESSION["RacineServ"] . "/pages/recrutement.php");
         }
-    }
-    if ($url[0] == "offre")
-    {
-        require_once($_SESSION["RacineServ"] . "/src/php/offre.php");
     }
     else
     {
