@@ -13,14 +13,14 @@
 
     if (empty($url) == true || $url[0] == "recrutement")    // Si liens vide ou /recrutement
     {
-        if ($url[1] == "profil")             // Si /recrutement/profil
+        if (isset($url[1]) && $url[1] == "profil")             // Si /recrutement/profil
         {
             if (isset($url[2]))         // Si /recrutement/profil/idProfil
             {
                 $idProfil = $url[2];
-                if($url[3] == "contact")        // Si /recrutement/profil/idProfil/contact
+                if(isset($url[3]) && $url[3] == "contact")        // Si /recrutement/profil/idProfil/contact
                 {
-                    require_once($_SESSION[RacineServ] . "/pages/offre_traitement.php");
+                    require_once($_SESSION["RacineServ"] . "/pages/offre_traitement.php");
                 }
                 require_once($_SESSION["RacineServ"] . "/pages/profils.php");
             }
