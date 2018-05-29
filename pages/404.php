@@ -5,6 +5,6 @@
         <title>Page indisponible</title>
     </head>
     <body>
-        <h1>Nous sommes désolé mais cette page n'est pas disponible</h1>
+        <h1>Nous sommes désolés mais cette page n'est pas disponible</h1>
     </body>
 </html>
