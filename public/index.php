@@ -1,7 +1,6 @@
 <?php
     session_start();
     $_SESSION["RacineServ"] = dirname( dirname(__FILE__) );
-    require_once ($_SESSION["RacineServ"]. "/src/php/lienbdd.php");
 
     $url = "";
 

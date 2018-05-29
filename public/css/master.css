@@ -4,16 +4,60 @@
     padding: 0;
 }
 
+@font-face
+{
+    font-family: "Montserrat";
+    src: url("/font/montserrat/ttf/Montserrat-Regular.ttf");
+}
+
+@font-face
+{
+    font-family: "MontSerratBlack";
+    src: url("/font/montserrat/ttf/Montserrat-Black.ttf");
+}
+
 .nav
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 3;
+    width: -webkit-fill-available;
+}
+
+.nav__logo
+{
+        width: 170px;
+}
+
+.nav a
+{
+    text-decoration: none;
+    color: white;
+    font-family: MontSerratBlack,serif,"Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.nav__menu
 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
-    top: 0px;
+    min-width: 800px;
+}
 
-    background-color: black;
-    padding: 5px;
+.nav__menu__canditate
+{
+    padding: 12px 20px;
+    background-color: rgba(0,160,147,.5);
+    border-radius: 25px;
 }
 
 .header
@@ -21,11 +65,36 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+
 }
 
 .header__illustration
 {
     width: -webkit-fill-available;
+}
+
+.header__text
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+
+    padding: 150px;
+
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: xx-large;
+
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.8) 100%), no-repeat;
 }
 
 .filter-form
@@ -66,4 +135,26 @@
 {
     border-radius: 5px 5px 5px 5px;
     font-size: 1.5em;
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.filter-form__keywords
+{
+    text-align: left;
+    padding-left: 15px;
+    min-width: 400px;
+    font-size: 1.5em;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.filter-form__button
+{
+    border-radius: 5px 5px 5px 5px;
+}
+
+.filter-form__button-search
+{
+    width: 50px;
 }
