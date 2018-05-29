@@ -15,7 +15,7 @@
 
 
     <div>Contactez les étudiants</div>
-    <form method="post" action="offre_traitement.php">
+    <form method="post" action=<?= "/recrutement/profil/" . $idProfil . "/contact" ?>>
         <label>E-mail</label>
         <input type="email" name="email"/>
         <br/>

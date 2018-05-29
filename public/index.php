@@ -11,25 +11,25 @@
     }
 
 
-    if (empty($url) == true || $url[0] == "recrutement")
+    if (empty($url) == true || $url[0] == "recrutement")    // Si liens vide ou /recrutement
     {
-        if (isset($url[1]))
+        if ($url[1] == "profil")             // Si /recrutement/profil
         {
-            if (isset($url[2]))
+            if (isset($url[2]))         // Si /recrutement/profil/idProfil
             {
                 $idProfil = $url[2];
-                if($url[3] == "contact")
+                if($url[3] == "contact")        // Si /recrutement/profil/idProfil/contact
                 {
                     require_once($_SESSION[RacineServ] . "/pages/offre_traitement.php");
                 }
                 require_once($_SESSION["RacineServ"] . "/pages/profils.php");
             }
-            else
+            else                                    // Si pas d'idProfil
             {
                 require_once($_SESSION["RacineServ"] . "/pages/404.php");
             }
         }
-        if (isset($url[1]) == false)
+        if (isset($url[1]) == false)            // Si autre que /recrutement/profil
         {
             require_once($_SESSION["RacineServ"] . "/pages/recrutement.php");
         }
