@@ -22,7 +22,7 @@
                 {
                     require_once($_SESSION["RacineServ"] . "/pages/offre_traitement.php");
                 }
-                require_once($_SESSION["RacineServ"] . "/pages/profils.php");
+                require_once($_SESSION["RacineServ"] . "/pages/profil.php");
             }
             else                                    // Si pas d'idProfil
             {

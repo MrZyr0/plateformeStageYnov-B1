@@ -29,7 +29,7 @@
         <input type="text" name="entreprise">
         <br/>
         <label>Votre message</label>
-        <textarea name="message" rows="10" cols="50"></textarea>
+        <textarea name="message" rows="10" cols="50" ></textarea>
         <br>
         <input type="submit" value="Envoyer" />
     </form>
