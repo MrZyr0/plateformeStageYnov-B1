@@ -19,6 +19,14 @@ if (isset($_POST['email'])) {
     // Send the message
     $result = $mailer->send($message);
 }
+
+$statement = $connection->prepare("
+    SELECT *
+    FROM osi_offer
+    WHERE id = $idProfil;
+");
+$statement->execute();
+$offre = $statement->fetchAll();
 ?>
 
 
@@ -26,10 +34,10 @@ if (isset($_POST['email'])) {
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Profil <?= $idProfil ?></title>
+    <title><?= $offre[0]['title']?></title>
 </head>
 <body>
-<h1>Voici le profil n°<?= $idProfil ?></h1>
+<h1><?= $offre[0]['title']?></h1>
 <div class="contact">
     <div>Contactez les étudiants</div>
     <form method="post" action="">
@@ -55,11 +63,11 @@ if (isset($_POST['email'])) {
 <div class="content">
     <div class="description">
         <h2>DESCRIPTION</h2>
-        <?php print $bddoffres[$idProfil]['description'] ?>
+        <?php print $offre[0]['description'] ?>
     </div>
     <div class="competences">
         <h2>COMPETENCES</h2>
-        <?php print $bddoffres[$idProfil]['competences'] ?>
+        <?php print $offre[0]['competences'] ?>
     </div>
     <div class="technologies">
         <h2>TECHNOLOGIES UTILISEES</h2>
@@ -77,22 +85,22 @@ if (isset($_POST['email'])) {
 </div>
 <div class="profil">
     <div class="type">
-        <h2><?php print strtoupper($bddoffres[$idProfil]['type']) ?></h2>
+        <h2><?php print strtoupper($offre[0]['type']) ?></h2>
     </div>
     <div class="debut">
         <h2>DEBUT</h2>
         <br>
-        <?php print $bddoffres[$idProfil]['from_date'] ?>
+        <?php print $offre[0]['from_date'] ?>
     </div>
     <div class="fin">
         <h2>FIN</h2>
         <br>
-        <?php print $bddoffres[$idProfil]['to_date'] ?>
+        <?php print $offre[0]['to_date'] ?>
     </div>
     <div class="fin">
         <h2>PERIODE</h2>
         <br>
-        <?php print $bddoffres[$idProfil]['period'] ?>
+        <?php print $offre[0]['period'] ?>
     </div>
 </div>
 </body>
