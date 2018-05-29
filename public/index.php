@@ -20,7 +20,7 @@
                 $idProfil = $url[2];
                 if($url[3] == "contact")        // Si /recrutement/profil/idProfil/contact
                 {
-                    require_once($_SESSION[RacineServ] . "/pages/offre_traitement.php");
+                    require_once($_SESSION["RacineServ"] . "/pages/offre_traitement.php");
                 }
                 require_once($_SESSION["RacineServ"] . "/pages/profils.php");
             }
