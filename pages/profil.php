@@ -79,10 +79,10 @@ $offre = $statement->fetchAll();
     <div clas="image">
         <?php
         if ((stripos($offre[0]['class'], 'informatique')) !== false) {
-            print '<img src="/img/logo/informatique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+            print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
         }
         elseif ((stripos($offre[0]['class'], 'aeronautique')) !== false){
-            print '<img src="/img/logo/informatique.png" height="70px" class="imgynov" alt="logo ynov aeronautique">';
+            print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique">';
         }
         ?>
     </div>
