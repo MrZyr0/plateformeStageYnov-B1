@@ -29,6 +29,7 @@
     top: 0px;
     z-index: 3;
     width: -webkit-fill-available;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.5) 100%), no-repeat;
 }
 
 .nav__logo
@@ -133,6 +134,7 @@
 
 .filter-form__when__select, .filter-form__domain__select, .filter-form__contract__select
 {
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
     border-radius: 5px 5px 5px 5px;
     font-size: 1.5em;
     padding: .375rem .75rem;
@@ -142,11 +144,13 @@
 
 .filter-form__keywords
 {
+    border: none;
     text-align: left;
     padding-left: 15px;
     min-width: 400px;
     font-size: 1.5em;
     border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
 }
 
 .filter-form__button
@@ -157,4 +161,27 @@
 .filter-form__button-search
 {
     width: 50px;
+}
+
+.profil-container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+
+    background-color: #F3F2F2;
+}
+
+.profil-card
+{
+    height: 338px;
+    width: 272px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    background-color: white;
 }
