@@ -179,9 +179,65 @@
 
 .profil-card
 {
-    height: 338px;
-    width: 272px;
+    height: 400px;
+    width: 300px;
+    padding: 10px;
     border-radius: 5px 5px 5px 5px;
     box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
     background-color: white;
+}
+
+.profil-card__header-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profil-card__logo
+{
+    width: 215px;
+}
+
+.profil-card__title
+{
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7em;
+
+    margin-bottom: 10px;
+}
+
+.profil-card__keywords-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profil-card__keywords-container__keywords
+{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    background-color: #23b2a4;
+    padding: 5px;
+    color: white;
+
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.profil-card__desc
+{
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1em;
 }

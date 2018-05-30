@@ -136,11 +136,19 @@ if (isset ($_GET["tri"]))
 
     <div class="profil-container">
         <div class="profil-card">
-            <div class="profil-card__header">
-                <img src="" alt="Pictograme de la filière" class="profil-card__logo-school">
-                <img src="" alt="Logo de l'école" class="profil-card__logo-school">
+            <div class="profil-card__header-container">
+                <img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière" class="profil-card__logo">
+                <img src="/img/icons/logo-school/ingesup.png" alt="Logo de l'école" class="profil-card__logo">
             </div>
-            <h2 class="profil-card__title">Nom du profil</h2>
+
+            <h2 class="profil-card__title">Développeur web</h2>
+
+            <div class="profil-card__keywords-container">
+                <span class="profil-card__keywords-container__keywords">SEO</span>
+                <span class="profil-card__keywords-container__keywords">HTML</span>
+                <span class="profil-card__keywords-container__keywords">JS</span>
+            </div>
+
             <p class="profil-card__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
         </div>
