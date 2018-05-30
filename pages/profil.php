@@ -78,25 +78,29 @@ $offre = $statement->fetchAll();
     <div class="profil">
         <div clas="image">
             <?php
-            if ((stripos($offre[0]['class'], 'informatique')) !== false)
-            {
-                print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
-            }
-            elseif ((stripos($offre[0]['class'], 'aeronautique')) !== false)
-            {}
-                elseif (((stripos($offre[0]['class'], 'business')) !== false)or((stripos($offre[0]['class'], 'digital')) !== false)){
-                    print '<img src="/img/logo/digitalbusiness.png" height="70px" class="imgynov" alt="logo ynov digital business">';
+                switch ($offre[0]['class'])
+                {
+                    case 'ingesup':
+                        print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    break;
+
+                    case 'isee':
+                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    break;
+
+                    case 'aeronautique':
+                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    break;
+
+                    case 'jeuxvideo':
+                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    break;
+
+                    default:
+                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    break;
                 }
-                elseif ((stripos($offre[0]['class'], 'audiovisuel')) !== false){
-                    print '<img src="/img/logo/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel">';
-                }
-                elseif (((stripos($offre[0]['class'], 'jeux video')) !== false)or((stripos($offre[0]['class'], 'jeux vidéo')) !== false)or ((stripos($offre[0]['class'], 'animation')) !== false)){
-                    print '<img src="/img/logo/jeuxvideos.png" height="70px" class="imgynov" alt="logo ynov jeux vidéos">';
-                }
-                elseif (((stripos($offre[0]['class'], 'graphic')) !== false)or ((stripos($offre[0]['class'], 'web')) !== false) or ((stripos($offre[0]['class'], 'com')) !== false)or ((stripos($offre[0]['class'], 'design')) !== false)){
-                    print '<img src="/img/logo/webcom.png" height="70px" class="imgynov" alt="logo ynov graphic design">';
-                }
-                ?>
+            ?>
             </div>
             <div class="class">
                 <h2>CLASSE</h2>
