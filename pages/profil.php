@@ -34,27 +34,23 @@ $offre = $statement->fetchAll();
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title><?= $offre[0]['title']?></title>
+    <title><?= $offre[0]['title'] ?></title>
 </head>
 <body>
-<h1><?= $offre[0]['title']?></h1>
+<h1><?= $offre[0]['title'] ?></h1>
 <div class="contact">
     <div>Contactez les étudiants</div>
     <form method="post" action="">
-        <label>E-mail</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="E-mail" required>
         <br/>
-        <label>Téléphone</label>
-        <input type="tel" name="tel" required>
+        <input type="tel" name="tel" placeholder="Téléphone" required>
         <br/>
-        <label>NOM Prénom</label>
-        <input type="text" name="nom">
+        <input type="text" name="nom" placeholder="NOM" required>
         <br/>
-        <label>Nom de l'entreprise</label>
-        <input type="text" name="entreprise" required>
+        <input type="text" name="entreprise" placeholder="Nom de l'entreprise" required>
         <br/>
-        <label>Votre message</label>
-        <textarea style="resize: none" name="message" rows="10" cols="50" required></textarea>
+        <textarea style="resize: none" name="message" rows="10" cols="50" placeholder="Votre message"
+                  required></textarea>
         <br>
         <input type="submit" value="Envoyer"/>
     </form>
@@ -62,7 +58,7 @@ $offre = $statement->fetchAll();
 
 <div class="content">
     <div class="description">
-        <h2>DESCRIPTION</h2>
+        <h2>PROFIL DE NOS ETUDIANTS</h2>
         <?php print $offre[0]['description'] ?>
     </div>
     <div class="competences">
@@ -73,32 +69,41 @@ $offre = $statement->fetchAll();
         ");
         $statement->execute();
         $skills = $statement->fetchAll();
-        for ($i = 0; $i < count($skills); $i++){
-            print $skills[$i]['title']. " ";
+        for ($i = 0; $i < count($skills); $i++) {
+            print $skills[$i]['title'] . " ";
         }
         ?>
     </div>
 </div>
 <div class="profil">
     <div clas="image">
-        <img src="../public/img/logo-header.png">
+        <?php
+        if ((stripos($offre[0]['class'], 'informatique')) !== false) {
+            print '<img src="/img/logo/informatique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+        }
+        elseif ((stripos($offre[0]['class'], 'aeronautique')) !== false){
+            print '<img src="/img/logo/informatique.png" height="70px" class="imgynov" alt="logo ynov aeronautique">';
+        }
+        ?>
+    </div>
+    <div class="class">
+        <h2>CLASSE</h2>
+        <?php print $offre[0]['class'] ?>
     </div>
     <div class="type">
-        <h2><?php print strtoupper($offre[0]['type']) ?></h2>
+        <h2>TYPE</h2>
+        <?php print $offre[0]['type'] ?>
     </div>
     <div class="debut">
         <h2>DEBUT</h2>
-        <br>
         <?php print $offre[0]['from_date'] ?>
     </div>
     <div class="fin">
         <h2>FIN</h2>
-        <br>
         <?php print $offre[0]['to_date'] ?>
     </div>
     <div class="fin">
         <h2>PERIODE</h2>
-        <br>
         <?php print $offre[0]['period'] ?>
     </div>
 </div>
