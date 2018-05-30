@@ -12,8 +12,8 @@ if (isset($_POST['email'])) {
 
     // Create a message
     $message = (new Swift_Message('Contactez nos étudiants'))
-        ->setFrom(['stageynov@gmail.com'])
-        ->setTo([$_POST["email"] => $_POST["nom"]])
+        ->setFrom([$_POST["email"] => $_POST["nom"]])
+        ->setTo(["stageynov@gmail.com"])
         ->setBody("De l'entreprise " . $_POST["entreprise"] . " : \n" . $_POST["message"] . "\nContactez l'entreprise au " . $_POST["tel"]);
 
     // Send the message
@@ -67,10 +67,6 @@ $offre = $statement->fetchAll();
     </div>
     <div class="competences">
         <h2>COMPETENCES</h2>
-        <?php print $offre[0]['competences'] ?>
-    </div>
-    <div class="technologies">
-        <h2>TECHNOLOGIES UTILISEES</h2>
         <?php
         $statement = $connection->prepare("
         SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $idProfil;
@@ -84,6 +80,9 @@ $offre = $statement->fetchAll();
     </div>
 </div>
 <div class="profil">
+    <div clas="image">
+        <img src="../public/img/logo-header.png">
+    </div>
     <div class="type">
         <h2><?php print strtoupper($offre[0]['type']) ?></h2>
     </div>
