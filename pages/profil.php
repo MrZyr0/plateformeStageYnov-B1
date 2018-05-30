@@ -78,26 +78,44 @@ $offre = $statement->fetchAll();
     <div class="profil">
         <div clas="image">
             <?php
-                switch ($offre[0]['class'])
+                switch ($offre[0]['categorie'])
                 {
+                    case 'informatique':
                     case 'ingesup':
+                    case 'ingésup':
                         print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
                     break;
 
-                    case 'isee':
-                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    case 'business':
+                    case 'digital business':
+                    case 'digital':
+                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov digital business school">';
                     break;
 
                     case 'aeronautique':
-                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique">';
                     break;
 
-                    case 'jeuxvideo':
-                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                    case 'jeux video':
+                    case 'jeux vidéo':
+                    case 'jeux videos':
+                    case 'jeux vidéos':
+                    case 'jeux':
+                    case 'animation':
+                    case 'animation 3d':
+                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov game">';
                     break;
+
+                    case 'audiovisuel':
+                        print '<img src="/img/icons/logo-school/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel">';
+                        break;
+
+                    case 'webcom':
+                        print '<img src="/img/icons/logo-school/web.png" height="70px" class="imgynov" alt="logo ynov webcom">';
+                        break;
 
                     default:
-                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov">';
                     break;
                 }
             ?>
