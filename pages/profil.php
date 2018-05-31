@@ -129,14 +129,14 @@ $offre = $statement->fetchAll();
                 <form method="post" action="">
                     <input type="email" name="email" placeholder="E-mail" required>
                     <br/>
-                    <input type="tel" name="tel" placeholder="Téléphone" required>
+                    <input type="tel" name="tel" placeholder="Téléphone" >
                     <br/>
                     <input type="text" name="nom" placeholder="NOM" required>
                     <br/>
                     <input type="text" name="entreprise" placeholder="Nom de l'entreprise" required>
                     <br/>
-                    <textarea style="resize: none" name="message" rows="10" cols="50" placeholder="Votre message"
-                    required></textarea>
+                    <textarea style="resize: none" name="message" rows="10" cols="50" placeholder="Votre message" required>
+                    </textarea>
                     <br>
                     <input type="submit" value="Envoyer"/>
                 </form>

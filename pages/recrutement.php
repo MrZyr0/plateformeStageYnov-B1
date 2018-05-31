@@ -6,67 +6,66 @@ if (isset ($_GET["tri"]))
     switch ($_GET["tri"])
     {
         case "offre":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY title;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY title;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
 
         case "type":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY type;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY type;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
 
         case "class":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY class;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY class;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
 
         case "periode":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY period;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY period;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
 
         case "debut":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY from_date;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY from_date;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
 
         case "fin":
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            ORDER BY to_date;
-            ");
-            $statement->execute();
-            $bddoffres = $statement->fetchAll();
-            break;
+        $statement = $connection->prepare("
+        SELECT *
+        FROM osi_offer
+        ORDER BY to_date;
+        ");
+        $statement->execute();
+        $bddoffres = $statement->fetchAll();
+        break;
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -141,127 +140,131 @@ if (isset ($_GET["tri"]))
 
 
     <div class="profil-container">
-        <?php for ($i = 1; $i < count($bddoffres)+1; $i++)
+    <?php
+        for ($nbProfilAff = 1; $nbProfilAff < count($bddoffres)+1; $nbProfilAff)    // Pour le nb de profils dispo
         {
-            $statement = $connection->prepare("
-            SELECT *
-            FROM osi_offer
-            WHERE id = $i;
-            ");
-            $statement->execute();
-            $offre = $statement->fetchAll();
-            ?>
-            <div class="profil-card">
-                <div class="profil-card__header-container">
-                    <?php
-                    switch ($offre[0]['categorie'])
-                    {
-                        case 'informatique':
-                            case 'ingesup':
-                            case 'ingésup':
-                            print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière" >';
-                            break;
+            print "<div class=\"profil-container__ligne\">";
 
-                            case 'business':
-                            case 'digital business':
-                            case 'digital':
-                            print '<img src="/img/icons/picto-school/isee/picto_ynov_digital_communication.png" alt="Pictograme de la filière">';
-                            break;
+            for ($nbProfilAffLine = 0; $nbProfilAffLine < 4; $nbProfilAffLine++)
+            {
+                $statement = $connection->prepare("
+                SELECT *
+                FROM osi_offer
+                WHERE id = $nbProfilAff;
+                ");
+                $statement->execute();
+                $offre = $statement->fetchAll();
 
-                            case 'aeronautique':
-                            print '<img src="/img/icons/picto-school/aeronautique/rocket.png" alt="Pictograme de la filière">';
-                            break;
+                print "<div class=\"profil-card\">";
+                print "<div class=\"profil-card__header-container\">";
+                switch ($offre[0]['categorie'])
+                {
+                    case 'informatique':
+                    case 'ingesup':
+                    case 'ingésup':
+                        print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière" >';
+                    break;
 
-                            case 'jeux video':
-                            case 'jeux vidéo':
-                            case 'jeux videos':
-                            case 'jeux vidéos':
-                            case 'jeux':
-                            case 'animation':
-                            case 'animation 3d':
-                                print '<img src="/img/icons/picto-school/game/picto_ynov_jeuxvideo_pad.png" alt="Pictograme de la filière">';
-                            break;
+                    case 'business':
+                    case 'digital business':
+                    case 'digital':
+                        print '<img src="/img/icons/picto-school/isee/picto_ynov_digital_communication.png" alt="Pictograme de la filière">';
+                    break;
 
-                            case 'audiovisuel':
-                                print '<img src="/img/icons/picto-school/audiovisuel/picto_ynov_audiovisuel_clap.png" alt="Pictograme de la filière">';
-                            break;
+                    case 'aeronautique':
+                        print '<img src="/img/icons/picto-school/aeronautique/rocket.png" alt="Pictograme de la filière">';
+                    break;
 
-                            case 'webcom':
-                                print '<img src="/img/icons/picto-school/web/picto_ynov_webcom_responsiv.png" alt="Pictograme de la filière">';
-                            break;
+                    case 'jeux video':
+                    case 'jeux vidéo':
+                    case 'jeux videos':
+                    case 'jeux vidéos':
+                    case 'jeux':
+                    case 'animation':
+                    case 'animation 3d':
+                        print '<img src="/img/icons/picto-school/game/picto_ynov_jeuxvideo_pad.png" alt="Pictograme de la filière">';
+                    break;
 
-                            default:
-                                print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière">';
-                            break;
-                        }
-                        ?>
-                        <?php
-                        switch ($offre[0]['categorie'])
-                        {
-                            case 'informatique':
-                                case 'ingesup':
-                                case 'ingésup':
-                                    print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique" class="profil-card__logo">';
-                                break;
+                    case 'audiovisuel':
+                        print '<img src="/img/icons/picto-school/audiovisuel/picto_ynov_audiovisuel_clap.png" alt="Pictograme de la filière">';
+                    break;
 
-                                case 'business':
-                                case 'digital business':
-                                case 'digital':
-                                    print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov digital business school" class="profil-card__logo">';
-                                break;
+                    case 'webcom':
+                        print '<img src="/img/icons/picto-school/web/picto_ynov_webcom_responsiv.png" alt="Pictograme de la filière">';
+                    break;
 
-                                case 'aeronautique':
-                                    print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique" class="profil-card__logo">';
-                                break;
+                    default:
+                        print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière">';
+                    break;
+                }
+                switch ($offre[0]['categorie'])
+                {
+                    case 'informatique':
+                    case 'ingesup':
+                    case 'ingésup':
+                        print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique" class="profil-card__logo">';
+                    break;
 
-                                case 'jeux video':
-                                case 'jeux vidéo':
-                                case 'jeux videos':
-                                case 'jeux vidéos':
-                                case 'jeux':
-                                case 'animation':
-                                case 'animation 3d':
-                                    print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov game" class="profil-card__logo">';
-                                break;
+                    case 'business':
+                    case 'digital business':
+                    case 'digital':
+                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov digital business school" class="profil-card__logo">';
+                    break;
 
-                                case 'audiovisuel':
-                                    print '<img src="/img/icons/logo-school/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel" class="profil-card__logo">';
-                                break;
+                    case 'aeronautique':
+                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique" class="profil-card__logo">';
+                    break;
 
-                                case 'webcom':
-                                    print '<img src="/img/icons/logo-school/web.png" height="70px" class="imgynov" alt="logo ynov webcom" class="profil-card__logo">';
-                                break;
+                    case 'jeux video':
+                    case 'jeux vidéo':
+                    case 'jeux videos':
+                    case 'jeux vidéos':
+                    case 'jeux':
+                    case 'animation':
+                    case 'animation 3d':
+                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov game" class="profil-card__logo">';
+                    break;
 
-                                default:
-                                    print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov" class="profil-card__logo">';
-                                break;
-                            }
-                            ?>
-                        </div>
+                    case 'audiovisuel':
+                        print '<img src="/img/icons/logo-school/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel" class="profil-card__logo">';
+                    break;
 
-                        <h2 class="profil-card__title"><a href="recrutement/profil/<?= $i ?>"><?= $offre[0]['title'] ?></a></h2>
+                    case 'webcom':
+                        print '<img src="/img/icons/logo-school/web.png" height="70px" class="imgynov" alt="logo ynov webcom" class="profil-card__logo">';
+                    break;
 
-                        <div class="profil-card__keywords-container">
-                            <?php
-                            $statement = $connection->prepare("
-                            SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $i;
-                            ");
-                            $statement->execute();
-                            $skills = $statement->fetchAll();
-                            for ($j = 0; $j < count($skills); $j++) {
-                                print '<span class="profil-card__keywords-container__keywords">' . $skills[$j]['title'] . "</span>";
-                            }
-                            ?>
-                        </div>
+                    default:
+                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov" class="profil-card__logo">';
+                    break;
+                }
+                print "</div>";
+                print "<h2 class=\"profil-card__title\"><a href=\"recrutement/profil/$nbProfilAff\">" . $offre[0]['title'] . "</a></h2>";
+                print "<div class=\"profil-card__keywords-container\">";
 
-                        <p class="profil-card__desc">
-                            <?= mb_strimwidth($offre[0]['description'], 0, 200, "...");?>
-                        </p>
+                $statement = $connection->prepare("SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $nbProfilAff;");
+                $statement->execute();
+                $skills = $statement->fetchAll();
+                for ($j = 0; $j < count($skills); $j++)
+                {
+                    print '<h3 class="profil-card__keywords-container__keywords">' . $skills[$j]['title'] . "</h3>";
+                }
 
-                    </div>
-                <?php }?>
-            </div>
+                print "</div>";
+                print "<p class=\"profil-card__desc\">" . mb_strimwidth($offre[0]['description'], 0, 200, "...") . "</p>";
+                print "</div>";
 
-<img src="/img/footer.png" alt="fouter">
+
+                $nbProfilAff++;
+                if ($nbProfilAff == count($bddoffres)+1)
+                {
+                    break;
+                }
+            }
+            print "</div>";
+        }
+    ?>
+    </div>
+
+    <img src="/img/footer.png" alt="fouter">
 </body>
 </html>

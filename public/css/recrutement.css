@@ -114,6 +114,15 @@
     background-color: #F3F2F2;
 }
 
+.profil-container__ligne
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: -webkit-fill-available;
+}
+
 .profil-card
 {
     height: 400px;
