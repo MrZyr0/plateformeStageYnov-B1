@@ -14,35 +14,32 @@
 
 .header__text
 {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-
+    text-align: center;
+    line-height: 5vw;
     position: absolute;
     top: 0px;
-    left: 0px;
     bottom: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 2;
-
-    padding: 150px;
-
+    padding-top: 15vw;
+    /* padding-bottom: 4em; */
     font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: xx-large;
-
+    font-size: 2.5vw;
+    font-weight: 700;
     color: white;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.8) 100%), no-repeat;
-}
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.8) 100%), no-repeat;}
 
 .filter-form
 {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #23b2a4;
-    padding: 20px;
-    color: black;}
+    color: black;
+}
 
 .filter-form__when, .filter-form__domain, .filter-form__contract
 {
@@ -50,6 +47,7 @@
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
 
     min-width: 280px;
 }
@@ -72,32 +70,39 @@
 .filter-form__when__select, .filter-form__domain__select, .filter-form__contract__select
 {
     box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
     font-size: 1.5em;
     padding: .375rem .75rem;
     border: 1px solid #ced4da;
-    border-radius: .25rem;
+    margin-left: 25px;
 }
 
 .filter-form__keywords
 {
+    height: 43px;
+    text-align: center;
     border: none;
-    text-align: left;
-    padding-left: 15px;
-    min-width: 400px;
+    max-width: 300px;
     font-size: 1.5em;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    box-shadow: 0px 6px 17px -7px rgba(0,0,0);
+    margin: 20px;
 }
 
 .filter-form__button
 {
-    border-radius: 5px 5px 5px 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
 }
 
 .filter-form__button-search
 {
-    width: 50px;
+    width: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px -15px rgba(0,0,0,0.75);
 }
 
 .profil-container
@@ -125,7 +130,7 @@
 
 .profil-card
 {
-    height: 400px;
+    height: 450px;
     width: 300px;
     padding: 10px;
     margin: 50px;
@@ -145,7 +150,12 @@
 
 .profil-card__logo
 {
-    width: 215px;
+    width: 200px;
+}
+
+.profil-card__picto
+{
+    width: 65px;
 }
 
 .profil-card__title
@@ -153,18 +163,31 @@
     font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 1.7em;
+    font-size: 1.3em;
+    max-height: 25px;
+    width: -webkit-fill-available;
+    text-align: justify;
+    text-align: center;
+    color: black;
+    text-decoration: none;
 
     margin-bottom: 10px;
+}
+
+.profil-card__title__link
+{
+    color: black;
+    text-decoration: none;
 }
 
 .profil-card__keywords-container
 {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
     margin-bottom: 25px;
+    min-height: 90px;
 }
 
 .profil-card__keywords-container__keywords
@@ -173,6 +196,7 @@
     box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
     background-color: #23b2a4;
     padding: 5px;
+    margin: 5px;
     color: white;
 
     font-family: "Montserrat", "Helvetica", "Arial", sans-serif;

@@ -4,6 +4,16 @@
     padding: 0;
 }
 
+b
+{
+    font-weight: normal;
+}
+
+em
+{
+    font-style: normal;
+}
+
 @font-face
 {
     font-family: "Montserrat";
@@ -30,6 +40,7 @@
     z-index: 3;
     width: -webkit-fill-available;
     background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.5) 100%), no-repeat;
+    width: -webkit-fill-available;
 }
 
 .nav__logo
@@ -59,4 +70,9 @@
     padding: 12px 20px;
     background-color: rgba(0,160,147);
     border-radius: 25px;
+}
+
+.footer
+{
+    width: 100%;
 }

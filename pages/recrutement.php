@@ -1,81 +1,15 @@
-<?php
-require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
-
-if (isset ($_GET["tri"]))
-{
-    switch ($_GET["tri"])
-    {
-        case "offre":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY title;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-
-        case "type":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY type;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-
-        case "class":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY class;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-
-        case "periode":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY period;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-
-        case "debut":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY from_date;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-
-        case "fin":
-        $statement = $connection->prepare("
-        SELECT *
-        FROM osi_offer
-        ORDER BY to_date;
-        ");
-        $statement->execute();
-        $bddoffres = $statement->fetchAll();
-        break;
-    }
-}
-?>
+<?php require_once($_SESSION["RacineServ"] . "/src/php/lienbdd.php"); ?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <title>Liste profils</title>
+    <title>Liste profils - recrutement - Lyon Ynov Campus</title>
+
     <link rel="stylesheet" href="/css/master.css">
     <link rel="stylesheet" href="/css/recrutement.css">
     <link rel="shortcut icon" href="https://www.ynov.com/wp-content/themes/ynov/assets/images/favicons/favicon-32x32.png">
+
     <meta name="google-site-verification" content="1_DIXFM6ZghuayF4pZev37YKzptCEDRhEvZdN-nmhKU" />
 </head>
 
@@ -88,13 +22,13 @@ if (isset ($_GET["tri"]))
             <a href="http://www.ynovlyon.com/fr/">ENTREPRISES</a>
             <a href="http://www.ynovlyon.com/fr/actualites/">BLOG</a>
             <a href="http://www.ynovlyon.com/fr/candidater/" class="nav__menu__canditate">Candidater</a>
-            <a href="#"></a>
+            <a href="http://www.ynovlyon.com/fr/nous-contacter/">CONTACT</a>
         </div>
     </nav>
 
     <header class="header">
         <img src="/img/illustrations/illustration-recrutement.jpg" alt="Image d'illustration de la page" class="header__illustration">
-        <h1 class="header__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1>
+        <h1 class="header__text">Découvrez nos <b>talents</b> !</br><em>Stage</em>, <em>Alternance</em>, <em>CDI</em>, <em>CDD</em> ...</br>Trouvez les profils dont vous avez besoin pour votre entreprise</h1>
     </header>
 
     <form class="filter-form" action="#" method="post">
@@ -157,88 +91,88 @@ if (isset ($_GET["tri"]))
 
                 print "<div class=\"profil-card\">";
                 print "<div class=\"profil-card__header-container\">";
-                switch ($offre[0]['categorie'])
+                switch ($offre[0]["categorie"])
                 {
-                    case 'informatique':
-                    case 'ingesup':
-                    case 'ingésup':
-                        print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière" >';
+                    case "informatique":
+                    case "ingesup":
+                    case "ingésup":
+                        print "<img src=\"/img/icons/picto-school/ingesup/code.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'business':
-                    case 'digital business':
-                    case 'digital':
-                        print '<img src="/img/icons/picto-school/isee/picto_ynov_digital_communication.png" alt="Pictograme de la filière">';
+                    case "business":
+                    case "digital business":
+                    case "digital":
+                        print "<img src=\"/img/icons/picto-school/isee/communication.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'aeronautique':
-                        print '<img src="/img/icons/picto-school/aeronautique/rocket.png" alt="Pictograme de la filière">';
+                    case "aeronautique":
+                        print "<img src=\"/img/icons/picto-school/aeronautique/rocket.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'jeux video':
-                    case 'jeux vidéo':
-                    case 'jeux videos':
-                    case 'jeux vidéos':
-                    case 'jeux':
-                    case 'animation':
-                    case 'animation 3d':
-                        print '<img src="/img/icons/picto-school/game/picto_ynov_jeuxvideo_pad.png" alt="Pictograme de la filière">';
+                    case "jeux video":
+                    case "jeux vidéo":
+                    case "jeux videos":
+                    case "jeux vidéos":
+                    case "jeux":
+                    case "animation":
+                    case "animation 3d":
+                        print "<img src=\"/img/icons/picto-school/game/pad.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'audiovisuel':
-                        print '<img src="/img/icons/picto-school/audiovisuel/picto_ynov_audiovisuel_clap.png" alt="Pictograme de la filière">';
+                    case "audiovisuel":
+                        print "<img src=\"/img/icons/picto-school/audiovisuel/clap.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'webcom':
-                        print '<img src="/img/icons/picto-school/web/picto_ynov_webcom_responsiv.png" alt="Pictograme de la filière">';
+                    case "webcom":
+                        print "<img src=\"/img/icons/picto-school/web/idea.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
 
                     default:
-                        print '<img src="/img/icons/picto-school/ingesup/code.png" alt="Pictograme de la filière">';
+                        print "<img src=\"/img/icons/picto-school/ingesup/code.svg\" alt=\"Pictograme de la filière\" class=\"profil-card__picto\">";
                     break;
                 }
-                switch ($offre[0]['categorie'])
+                switch ($offre[0]["categorie"])
                 {
-                    case 'informatique':
-                    case 'ingesup':
-                    case 'ingésup':
-                        print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique" class="profil-card__logo">';
+                    case "informatique":
+                    case "ingesup":
+                    case "ingésup":
+                        print "<img src=\"/img/icons/logo-school/ingesup.svg\" class=\"profil-card__logo\" alt=\"logo ynov informatique\" class=\"profil-card__logo\" class=\"profil-card__picto\">";
                     break;
 
-                    case 'business':
-                    case 'digital business':
-                    case 'digital':
-                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov digital business school" class="profil-card__logo">';
+                    case "business":
+                    case "digital business":
+                    case "digital":
+                        print "<img src=\"/img/icons/logo-school/digital_business_school.svg\" class=\"profil-card__logo\" alt=\"logo ynov digital business school\" class=\"profil-card__logo\">";
                     break;
 
-                    case 'aeronautique':
-                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique" class="profil-card__logo">';
+                    case "aeronautique":
+                        print "<img src=\"/img/icons/logo-school/aeronautique_et_systemes_embarques.svg\" class=\"profil-card__logo\" alt=\"logo ynov aeronautique\" class=\"profil-card__logo\">";
                     break;
 
-                    case 'jeux video':
-                    case 'jeux vidéo':
-                    case 'jeux videos':
-                    case 'jeux vidéos':
-                    case 'jeux':
-                    case 'animation':
-                    case 'animation 3d':
-                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov game" class="profil-card__logo">';
+                    case "jeux video":
+                    case "jeux vidéo":
+                    case "jeux videos":
+                    case "jeux vidéos":
+                    case "jeux":
+                    case "animation":
+                    case "animation 3d":
+                        print "<img src=\"/img/icons/logo-school/animation_3D_jeux_video.svg\" class=\"profil-card__logo\" alt=\"logo ynov game\" class=\"profil-card__logo\">";
                     break;
 
-                    case 'audiovisuel':
-                        print '<img src="/img/icons/logo-school/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel" class="profil-card__logo">';
+                    case "audiovisuel":
+                        print "<img src=\"/img/icons/logo-school/audiovisuel.svg\" class=\"profil-card__logo\" alt=\"logo ynov audiovisuel\" class=\"profil-card__logo\">";
                     break;
 
-                    case 'webcom':
-                        print '<img src="/img/icons/logo-school/web.png" height="70px" class="imgynov" alt="logo ynov webcom" class="profil-card__logo">';
+                    case "webcom":
+                        print "<img src=\"/img/icons/logo-school/web_com_et_graphic_design.svg\" class=\"profil-card__logo\" alt=\"logo ynov webcom\" class=\"profil-card__logo\">";
                     break;
 
                     default:
-                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov" class="profil-card__logo">';
+                        print "<img src=\"/img/icons/logo-school/bachelors.svg\" class=\"profil-card__logo\" alt=\"logo ynov\" class=\"profil-card__logo\">";
                     break;
                 }
                 print "</div>";
-                print "<h2 class=\"profil-card__title\"><a href=\"recrutement/profil/$nbProfilAff\">" . $offre[0]['title'] . "</a></h2>";
+                print "<h2 class=\"profil-card__title\"><a href=\"recrutement/profil/$nbProfilAff\" class=\"profil-card__title__link\">" . $offre[0]["title"] . "</a></h2>";
                 print "<div class=\"profil-card__keywords-container\">";
 
                 $statement = $connection->prepare("SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $nbProfilAff;");
@@ -246,11 +180,11 @@ if (isset ($_GET["tri"]))
                 $skills = $statement->fetchAll();
                 for ($j = 0; $j < count($skills); $j++)
                 {
-                    print '<h3 class="profil-card__keywords-container__keywords">' . $skills[$j]['title'] . "</h3>";
+                    print "<h3 class=\"profil-card__keywords-container__keywords\">" . $skills[$j]["title"] . "</h3>";
                 }
 
                 print "</div>";
-                print "<p class=\"profil-card__desc\">" . mb_strimwidth($offre[0]['description'], 0, 200, "...") . "</p>";
+                print "<p class=\"profil-card__desc\">" . mb_strimwidth($offre[0]["description"], 0, 200, "...") . "</p>";
                 print "</div>";
 
 
@@ -265,6 +199,6 @@ if (isset ($_GET["tri"]))
     ?>
     </div>
 
-    <img src="/img/footer.png" alt="fouter">
+    <img src="/img/footer.png" alt="fouter" class="footer">
 </body>
 </html>
