@@ -14,7 +14,7 @@ if (isset($_POST['email'])) {
     $message = (new Swift_Message('Contactez nos étudiants'))
     ->setFrom([$_POST["email"] => $_POST["nom"]])
     ->setTo(["stageynov@gmail.com"])
-    ->setBody("De l'entreprise " . $_POST["entreprise"] . " : \n" . $_POST["message"] . "\nContactez l'entreprise au " . $_POST["tel"]);
+    ->setBody("De l'entreprise " . $_POST["entreprise"] . " : \n" . $_POST["message"] . "\nContactez l'entreprise au " . $_POST["tel"] . " ou à cette adresse: " . $_POST["email"]);
 
     // Send the message
     $result = $mailer->send($message);
