@@ -1,0 +1,16 @@
+.nav
+{
+    background-color: black;
+    position: static;
+}
+
+.container
+{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.profile-card
+{
+    border: 1px solid black
+}

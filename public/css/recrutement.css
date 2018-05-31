@@ -1,0 +1,180 @@
+.header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+}
+
+.header__illustration
+{
+    width: -webkit-fill-available;
+}
+
+.header__text
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    z-index: 2;
+
+    padding: 150px;
+
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: xx-large;
+
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.8) 100%), no-repeat;
+}
+
+.filter-form
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23b2a4;
+    padding: 20px;
+    color: black;}
+
+.filter-form__when, .filter-form__domain, .filter-form__contract
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 280px;
+}
+
+.filter-form__domain
+{
+    min-width: 380px;
+}
+
+.filter-form__contract
+{
+    min-width: 350px;
+}
+
+.filter-form__when__label, .filter-form__domain__label, .filter-form__contract__label
+{
+     font-size: 2em;
+}
+
+.filter-form__when__select, .filter-form__domain__select, .filter-form__contract__select
+{
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    border-radius: 5px 5px 5px 5px;
+    font-size: 1.5em;
+    padding: .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.filter-form__keywords
+{
+    border: none;
+    text-align: left;
+    padding-left: 15px;
+    min-width: 400px;
+    font-size: 1.5em;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+}
+
+.filter-form__button
+{
+    border-radius: 5px 5px 5px 5px;
+}
+
+.filter-form__button-search
+{
+    width: 50px;
+}
+
+.profil-container
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 35px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 35px;
+
+    background-color: #F3F2F2;
+}
+
+.profil-card
+{
+    height: 400px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    background-color: white;
+}
+
+.profil-card__header-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profil-card__logo
+{
+    width: 215px;
+}
+
+.profil-card__title
+{
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.7em;
+
+    margin-bottom: 10px;
+}
+
+.profil-card__keywords-container
+{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profil-card__keywords-container__keywords
+{
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px 15px 23px -15px rgba(0,0,0,0.75);
+    background-color: #23b2a4;
+    padding: 5px;
+    color: white;
+
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.profil-card__desc
+{
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1em;
+}
