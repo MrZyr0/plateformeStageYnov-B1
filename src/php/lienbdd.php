@@ -30,4 +30,6 @@ $statement = $connection->prepare("
 ");
 $statement->execute();
 $bddskills = $statement->fetchAll();
+
+
 ?>
