@@ -34,112 +34,115 @@ $offre = $statement->fetchAll();
 <html lang="fr" dir="ltr">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/master.css">
+    <link rel="stylesheet" href="/css/profil.css">
+    <link rel="shortcut icon" href="https://www.ynov.com/wp-content/themes/ynov/assets/images/favicons/favicon-32x32.png">
     <title><?= $offre[0]['title'] ?></title>
 </head>
 <body>
-    <h1><?= $offre[0]['title'] ?></h1>
-    <div class="contact">
-        <div>Contactez les étudiants</div>
-        <form method="post" action="">
-            <input type="email" name="email" placeholder="E-mail" required>
-            <br/>
-            <input type="tel" name="tel" placeholder="Téléphone" required>
-            <br/>
-            <input type="text" name="nom" placeholder="NOM" required>
-            <br/>
-            <input type="text" name="entreprise" placeholder="Nom de l'entreprise" required>
-            <br/>
-            <textarea style="resize: none" name="message" rows="10" cols="50" placeholder="Votre message"
-            required></textarea>
-            <br>
-            <input type="submit" value="Envoyer"/>
-        </form>
-    </div>
-
-    <div class="content">
-        <div class="description">
-            <h2>PROFIL DE NOS ETUDIANTS</h2>
-            <?php print $offre[0]['description'] ?>
+    <nav class="nav">
+        <a href="/"><img src="/img/icons/prj_ynov.png" alt="Logo du Campus Ynov de Lyon" class="nav__logo"></a>
+        <div class="nav__menu">
+            <a href="http://www.ynovlyon.com/fr/">YNOV LYON</a>
+            <a href="http://www.ynovlyon.com/fr/">FORMATIONS</a>
+            <a href="http://www.ynovlyon.com/fr/">ENTREPRISES</a>
+            <a href="http://www.ynovlyon.com/fr/actualites/">BLOG</a>
+            <a href="http://www.ynovlyon.com/fr/candidater/" class="nav__menu__canditate">CANDIDATER</a>
+            <a href="http://www.ynovlyon.com/fr/nous-contacter/">CONTACT</a>
         </div>
-        <div class="competences">
-            <h2>COMPETENCES</h2>
-            <?php
-            $statement = $connection->prepare("
-            SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $idProfil;
-            ");
-            $statement->execute();
-            $skills = $statement->fetchAll();
-            for ($i = 0; $i < count($skills); $i++) {
-                print $skills[$i]['title'] . " ";
-            }
-            ?>
-        </div>
-    </div>
-    <div class="profil">
-        <div clas="image">
-            <?php
-                switch ($offre[0]['categorie'])
-                {
-                    case 'informatique':
-                    case 'ingesup':
-                    case 'ingésup':
-                        print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
-                    break;
+    </nav>
 
-                    case 'business':
-                    case 'digital business':
-                    case 'digital':
-                        print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov digital business school">';
-                    break;
+    <section class="container">
+            <div class="profile-card">
+                <h1><?= $offre[0]['title'] ?></h1>
 
-                    case 'aeronautique':
-                        print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov aeronautique">';
-                    break;
+                <div class="content">
+                    <div class="description">
+                        <h2>PROFIL DE NOS ETUDIANTS</h2>
+                        <?php print $offre[0]['description'] ?>
+                    </div>
+                    <div class="competences">
+                        <h2>COMPETENCES</h2>
+                        <?php
+                        $statement = $connection->prepare("
+                        SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $idProfil;
+                        ");
+                        $statement->execute();
+                        $skills = $statement->fetchAll();
+                        for ($i = 0; $i < count($skills); $i++) {
+                            print $skills[$i]['title'] . " ";
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="profil">
+                    <div clas="image">
+                        <?php
+                        switch ($offre[0]['class'])
+                        {
+                            case 'ingesup':
+                            print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            break;
 
-                    case 'jeux video':
-                    case 'jeux vidéo':
-                    case 'jeux videos':
-                    case 'jeux vidéos':
-                    case 'jeux':
-                    case 'animation':
-                    case 'animation 3d':
-                        print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov game">';
-                    break;
+                            case 'isee':
+                            print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            break;
 
-                    case 'audiovisuel':
-                        print '<img src="/img/icons/logo-school/audiovisuel.png" height="70px" class="imgynov" alt="logo ynov audiovisuel">';
-                        break;
+                            case 'aeronautique':
+                            print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            break;
 
-                    case 'webcom':
-                        print '<img src="/img/icons/logo-school/web.png" height="70px" class="imgynov" alt="logo ynov webcom">';
-                        break;
+                            case 'jeuxvideo':
+                            print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            break;
 
-                    default:
-                        print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov">';
-                    break;
-                }
-            ?>
+                            default:
+                            print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            break;
+                        }
+                        ?>
+                    </div>
+                    <div class="class">
+                        <h2>CLASSE</h2>
+                        <?php print $offre[0]['class'] ?>
+                    </div>
+                    <div class="type">
+                        <h2>TYPE</h2>
+                        <?php print $offre[0]['type'] ?>
+                    </div>
+                    <div class="debut">
+                        <h2>DEBUT</h2>
+                        <?php print $offre[0]['from_date'] ?>
+                    </div>
+                    <div class="fin">
+                        <h2>FIN</h2>
+                        <?php print $offre[0]['to_date'] ?>
+                    </div>
+                    <div class="fin">
+                        <h2>PERIODE</h2>
+                        <?php print $offre[0]['period'] ?>
+                    </div>
+                </div>
             </div>
-            <div class="class">
-                <h2>CLASSE</h2>
-                <?php print $offre[0]['class'] ?>
+            <div class="contact">
+                <div>Contactez les étudiants</div>
+                <form method="post" action="">
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <br/>
+                    <input type="tel" name="tel" placeholder="Téléphone" required>
+                    <br/>
+                    <input type="text" name="nom" placeholder="NOM" required>
+                    <br/>
+                    <input type="text" name="entreprise" placeholder="Nom de l'entreprise" required>
+                    <br/>
+                    <textarea style="resize: none" name="message" rows="10" cols="50" placeholder="Votre message"
+                    required></textarea>
+                    <br>
+                    <input type="submit" value="Envoyer"/>
+                </form>
             </div>
-            <div class="type">
-                <h2>TYPE</h2>
-                <?php print $offre[0]['type'] ?>
-            </div>
-            <div class="debut">
-                <h2>DEBUT</h2>
-                <?php print $offre[0]['from_date'] ?>
-            </div>
-            <div class="fin">
-                <h2>FIN</h2>
-                <?php print $offre[0]['to_date'] ?>
-            </div>
-            <div class="fin">
-                <h2>PERIODE</h2>
-                <?php print $offre[0]['period'] ?>
-            </div>
-        </div>
-    </body>
-    </html>
+
+    </section>
+    <img src="/img/footer.png" alt="fouter">
+</body>
+</html>
