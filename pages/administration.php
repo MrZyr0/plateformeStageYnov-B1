@@ -7,12 +7,12 @@ $statement = $connection->prepare("
 $statement->execute();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Administration</title>
 </head>
 <body>
-
+    <h1>Bienvenu sur la page d'admin</h1>
 </body>
 </html>

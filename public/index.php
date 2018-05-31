@@ -29,6 +29,10 @@
             require_once($_SESSION["RacineServ"] . "/pages/recrutement.php");
         }
     }
+    elseif (isset($url[0]) && $url[0] == "administration")
+    {
+            require_once($_SESSION["RacineServ"] . "/pages/administration.php");
+    }
     else
     {
         require_once($_SESSION["RacineServ"] . "/pages/404.php");

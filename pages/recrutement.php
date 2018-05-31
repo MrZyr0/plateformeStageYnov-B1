@@ -141,7 +141,8 @@ if (isset ($_GET["tri"]))
 
 
     <div class="profil-container">
-        <?php for ($i = 1; $i < count($bddoffres)+1; $i++) {
+        <?php for ($i = 1; $i < count($bddoffres)+1; $i++)
+        {
             $statement = $connection->prepare("
             SELECT *
             FROM osi_offer
