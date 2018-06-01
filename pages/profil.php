@@ -54,73 +54,95 @@ $offre = $statement->fetchAll();
 
     <section class="container">
             <div class="profile-card">
-                <h1><?= $offre[0]['title'] ?></h1>
-
-                <div class="content">
-                    <div class="description">
-                        <h2>PROFIL DE NOS ETUDIANTS</h2>
-                        <?php print $offre[0]['description'] ?>
-                    </div>
-                    <div class="competences">
-                        <h2>COMPETENCES</h2>
-                        <?php
-                        $statement = $connection->prepare("
-                        SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $idProfil;
-                        ");
-                        $statement->execute();
-                        $skills = $statement->fetchAll();
-                        for ($i = 0; $i < count($skills); $i++) {
-                            print $skills[$i]['title'] . " ";
-                        }
-                        ?>
-                    </div>
-                </div>
-                <div class="profil">
+                <div class="profile-card__col1">
+                    <a href="/"><img src="/img/icons/expand_arrow_64px.png" alt="Retour"></a>
                     <div clas="image">
                         <?php
-                        switch ($offre[0]['class'])
+                        switch ($offre[0]["categorie"])
                         {
-                            case 'ingesup':
-                            print '<img src="/img/icons/logo-school/ingesup.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            case "informatique":
+                            case "ingesup":
+                            case "ingésup":
+                                print "<img src=\"/img/icons/logo-school/ingesup.svg\" class=\"profil-card__logo\" alt=\"logo ynov informatique\" class=\"profil-card__logo\" class=\"profil-card__picto\">";
                             break;
 
-                            case 'isee':
-                            print '<img src="/img/icons/logo-school/isee.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            case "business":
+                            case "digital business":
+                            case "digital":
+                                print "<img src=\"/img/icons/logo-school/digital_business_school.svg\" class=\"profil-card__logo\" alt=\"logo ynov digital business school\" class=\"profil-card__logo\">";
                             break;
 
-                            case 'aeronautique':
-                            print '<img src="/img/icons/logo-school/aeronautique.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            case "aeronautique":
+                                print "<img src=\"/img/icons/logo-school/aeronautique_et_systemes_embarques.svg\" class=\"profil-card__logo\" alt=\"logo ynov aeronautique\" class=\"profil-card__logo\">";
                             break;
 
-                            case 'jeuxvideo':
-                            print '<img src="/img/icons/logo-school/game.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                            case "jeux video":
+                            case "jeux vidéo":
+                            case "jeux videos":
+                            case "jeux vidéos":
+                            case "jeux":
+                            case "animation":
+                            case "animation 3d":
+                                print "<img src=\"/img/icons/logo-school/animation_3D_jeux_video.svg\" class=\"profil-card__logo\" alt=\"logo ynov game\" class=\"profil-card__logo\">";
+                            break;
+
+                            case "audiovisuel":
+                                print "<img src=\"/img/icons/logo-school/audiovisuel.svg\" class=\"profil-card__logo\" alt=\"logo ynov audiovisuel\" class=\"profil-card__logo\">";
+                            break;
+
+                            case "webcom":
+                                print "<img src=\"/img/icons/logo-school/web_com_et_graphic_design.svg\" class=\"profil-card__logo\" alt=\"logo ynov webcom\" class=\"profil-card__logo\">";
                             break;
 
                             default:
-                            print '<img src="/img/icons/logo-school/ynov.png" height="70px" class="imgynov" alt="logo ynov informatique">';
+                                print "<img src=\"/img/icons/logo-school/bachelors.svg\" class=\"profil-card__logo\" alt=\"logo ynov\" class=\"profil-card__logo\">";
                             break;
                         }
                         ?>
                     </div>
                     <div class="class">
                         <h2>CLASSE</h2>
-                        <?php print $offre[0]['class'] ?>
+                        <p class="info"><?php print $offre[0]['class'] ?></p>
                     </div>
                     <div class="type">
                         <h2>TYPE</h2>
-                        <?php print $offre[0]['type'] ?>
+                        <p class="info"><?php print $offre[0]['type'] ?></p>
                     </div>
                     <div class="debut">
                         <h2>DEBUT</h2>
-                        <?php print $offre[0]['from_date'] ?>
+                        <p class="info"><?php print $offre[0]['from_date'] ?></p>
                     </div>
                     <div class="fin">
                         <h2>FIN</h2>
-                        <?php print $offre[0]['to_date'] ?>
+                        <p class="info"><?php print $offre[0]['to_date'] ?></p>
                     </div>
                     <div class="fin">
                         <h2>PERIODE</h2>
-                        <?php print $offre[0]['period'] ?>
+                        <p class="info"><?php print $offre[0]['period'] ?></p>
+                    </div>
+                </div>
+
+                <div class="profile-card__col2">
+                    <div class="content">
+                        <h1>Détaille du profil</h1>
+                        <h2><?= $offre[0]['title'] ?></h2>
+                        <div class="description">
+                            <h3>PROFIL DE NOS ETUDIANTS</h3>
+                            <?php print $offre[0]['description'] ?>
+                        </div>
+                        <div class="competences">
+                            <h2>COMPETENCES</h2>
+                            <?php
+                            $statement = $connection->prepare("
+                            SELECT s.* FROM `osi_skill` s JOIN osi_offer_skill os ON os.skill_id = s.id AND os.offer_id = $idProfil;
+                            ");
+                            $statement->execute();
+                            $skills = $statement->fetchAll();
+                            for ($i = 0; $i < count($skills); $i++) {
+                                print $skills[$i]['title'] . " ";
+                            }
+                            ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,6 +165,6 @@ $offre = $statement->fetchAll();
             </div>
 
     </section>
-    <img src="/img/footer.png" alt="fouter">
+    <img src="/img/footer.png" alt="fouter" class="footer">
 </body>
 </html>
