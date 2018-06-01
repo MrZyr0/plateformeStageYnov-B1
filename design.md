@@ -21,11 +21,11 @@ On a fait le choix de mettre des menus déroulants et une barre de recherche, pu
 ## Details des profils
 
 Quand on clique sur une des cartes présente sur la page d'accueil on arrive sur une page (profil).
- - En haut de cette page on retrouve le logo correspondant à l'ecole dans laquelle se trouve le logo et à coté, le titre de la page "details de profil" en h1.
- - Ensuite, sur la gauche de la page on a les informations telles que le niveau d'étude, le nombre de personnes ayant ce profil, le type de contrat recherché par ce profil et pour finir on a choisi de mettre une liste de tags (mélangeant compétences et technologies maîtrisées) de manière à avoir un resumé des compétences au premier coup d'oeuil.
+- En haut de cette page on retrouve le logo correspondant à l'ecole dans laquelle se trouve le logo et à coté, le titre de la page "details de profil" en h1.
+- Ensuite, sur la gauche de la page on a les informations telles que le niveau d'étude, le nombre de personnes ayant ce profil, le type de contrat recherché par ce profil et pour finir on a choisi de mettre une liste de tags (mélangeant compétences et technologies maîtrisées) de manière à avoir un resumé des compétences au premier coup d'oeuil.
 
 
- - Au milieu de la page on trouve la descrition précise du profil, puis les competences acquises (qui correspond à une sorte de precision des tags placés juste à coté).
+- Au milieu de la page on trouve la descrition précise du profil, puis les competences acquises (qui correspond à une sorte de precision des tags placés juste à coté).
 
 ###le formulaire
 Sur la droite de la page on trouve directement un formulaire de contact pour permettre à l'uttilisateur de contacter rapidement le gérant du site. On a choisi de le mettre sur la même page parce qu'on à penser que c'était judicieux pour inciter à contacter.

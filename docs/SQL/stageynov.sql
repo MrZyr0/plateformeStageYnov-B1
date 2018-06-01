@@ -35,16 +35,16 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `osi_offer`;
 
 CREATE TABLE IF NOT EXISTS `osi_offer` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `type` varchar(255) NOT NULL DEFAULT '',
-  `class` varchar(255) NOT NULL DEFAULT '',
-  `description` text NOT NULL,
-  `period` varchar(255) DEFAULT NULL,
-  `from_date` date DEFAULT NULL,
-  `to_date` date DEFAULT NULL,
-  `categorie` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+    `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `title` varchar(255) NOT NULL DEFAULT '',
+    `type` varchar(255) NOT NULL DEFAULT '',
+    `class` varchar(255) NOT NULL DEFAULT '',
+    `description` text NOT NULL,
+    `period` varchar(255) DEFAULT NULL,
+    `from_date` date DEFAULT NULL,
+    `to_date` date DEFAULT NULL,
+    `categorie` varchar(255) NOT NULL,
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
@@ -67,8 +67,8 @@ INSERT INTO `osi_offer` (`id`, `title`, `type`, `class`, `description`, `period`
 
 DROP TABLE IF EXISTS `osi_offer_skill`;
 CREATE TABLE IF NOT EXISTS `osi_offer_skill` (
-  `offer_id` int(11) UNSIGNED NOT NULL,
-  `skill_id` int(11) UNSIGNED NOT NULL
+    `offer_id` int(11) UNSIGNED NOT NULL,
+    `skill_id` int(11) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -93,9 +93,9 @@ INSERT INTO `osi_offer_skill` (`offer_id`, `skill_id`) VALUES
 
 DROP TABLE IF EXISTS `osi_skill`;
 CREATE TABLE IF NOT EXISTS `osi_skill` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+    `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+    `title` varchar(255) NOT NULL DEFAULT '',
+    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --

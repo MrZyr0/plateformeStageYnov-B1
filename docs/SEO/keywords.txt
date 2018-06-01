@@ -66,36 +66,36 @@ Architecte web
 
 
 Digital business school:
-Chargé-e de communication 
-Media planneur 
-Technico-commercial-e 
-Attaché-e Commercial-e 
-Responsable commercial 
-Consultant technique 
-Chef de projet Ingénieur commercial web 
-Consultant web analytique 
+Chargé-e de communication
+Media planneur
+Technico-commercial-e
+Attaché-e Commercial-e
+Responsable commercial
+Consultant technique
+Chef de projet Ingénieur commercial web
+Consultant web analytique
 Consultant en référencement
 
 Web com et graphic design:
-Chef de projet 
-Directeur artistique 
-Graphiste web / webgraphiste 
+Chef de projet
+Directeur artistique
+Graphiste web / webgraphiste
 Webdesigner
 
 Animation 3D, jeux vidéos:
-Story-boarder 
-Directeur de post-production 
-Chef de projet multimedia 
-Character designer 
-Animateur 2D et 3D 
-Directeur artistique 
-Illustrateur 2D et 3D 
-Graphiste ou infographiste 2D et 3D 
+Story-boarder
+Directeur de post-production
+Chef de projet multimedia
+Character designer
+Animateur 2D et 3D
+Directeur artistique
+Illustrateur 2D et 3D
+Graphiste ou infographiste 2D et 3D
 Développeur
 
 Audiovisuel:
-Accessoiriste 
-Scénographe 
+Accessoiriste
+Scénographe
 Directeur de post-production
 
 
@@ -130,8 +130,8 @@ Balises:
 
 <meta/>
 <head> </head>
-    <title></title>
-    <description></description>
+<title></title>
+<description></description>
 
 <!--->
 <meta property= »og:type » content= »Article » />
@@ -146,12 +146,12 @@ Balises:
 
 
 <!--/*<meta-keyword>*/-->
-    <title></title>
-    <meta-descrtption></meta-descrtption>
+<title></title>
+<meta-descrtption></meta-descrtption>
 <meta name="robots" content="index, follow"/>
-Dans la partie content, vous pouvez choisir entre index et noindex et follow/nofollow. Index et noindex indique au moteur de recherche si vous souhaitez que votre site 
+Dans la partie content, vous pouvez choisir entre index et noindex et follow/nofollow. Index et noindex indique au moteur de recherche si vous souhaitez que votre site
 apparaisse sur la page de résultats et follow et nofollow lui indique si vous souhaitez que les liens sur votre page soient suivis par le robot de Google (Google Bot).
-    
+
 <div itemscope itemtype=”http://schema.org/Store”>
 <span itemprop=”name”>Nom du magasin</span>
 <div itemprop=”address” itemscope itemtype=”http://schema.org/PostalAddress”>
@@ -159,12 +159,12 @@ apparaisse sur la page de résultats et follow et nofollow lui indique si vous s
 <span itemprop=”addressLocality”>Ville</span>,
 <span itemprop=”addressRegion”>Département</span>
 <span itemprop=”postalCode”>Le code postal</span>
-<span itemprop=”telephone”>le numéro de telephone du magasin</span>   
+<span itemprop=”telephone”>le numéro de telephone du magasin</span>
 <a href=”http://googlemapsurl.com” itemprop=”maps”>url de votre map</a>
 </div>
-    
-    
-    • La métadonnée description est unique pour chaque page ; elle résume le contenu de celle-ci. Votre site web a
+
+
+• La métadonnée description est unique pour chaque page ; elle résume le contenu de celle-ci. Votre site web a
 donc autant de descriptions que de pages.
 • La métadonnée description est tronquée au-delà de 150 signes ; il est conseillé de la rédiger en évitant de
 dépasser ce seuil.
@@ -173,7 +173,3 @@ mettre en avant les éléments différenciants de votre offre.
 • La description peut venir dialoguer avec le titre navigateur, c’est-à-dire compléter celui-ci. Elle apporte un
 complément d’information dans la mesure où le titre navigateur est limité à environ 60 signes.
 • La description peut contenir des mots-clés afin de jouer sur leur mise en gras dans les pages de Google.
-    
-    
-    
-    
