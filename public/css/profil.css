@@ -1,15 +1,14 @@
-.nav
-{
+.nav {
     background-color: black;
     position: static;
 }
 
-.container
-{
+.container {
     display: flex;
     flex-flow: row nowrap;
 }
 
+<<<<<<< HEAD
 .profile-card
 {
     display: flex;
@@ -70,4 +69,8 @@
     align-items: center;
 
     margin: 20px;
+=======
+.profile-card {
+    border: 1px solid black
+>>>>>>> aff36fc8547def65b6555c8c92a8faa0f70558a7
 }
