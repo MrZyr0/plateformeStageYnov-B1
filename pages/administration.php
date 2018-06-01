@@ -15,6 +15,7 @@ if (isset($_POST['title'])) {
     $statement->bindValue(':categorie', $_POST["categorie"]);
     $statement->execute();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -23,6 +24,7 @@ if (isset($_POST['title'])) {
     <title>Administration</title>
 </head>
 <body>
+
 <form method="post" action="">
     <div>AJOUTER UNE OFFRE:</div>
     <input type="number" name="id" placeholder="id">

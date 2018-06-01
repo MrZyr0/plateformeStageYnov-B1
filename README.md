@@ -14,8 +14,8 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 2. Installation des dépendances
 	1. Installer [composer](https://getcomposer.org/download/)
 	2. Installer des dépendances du projet
-		1. Ouvrir le dossier du repo ```cd chemin/du/repo```
-		2. Installer les dépendences ```composer install```
+		1. Ouvrir le dossier du repo ``cd chemin/du/repo``
+		2. Installer les dépendences ``composer install``
 
 
 
@@ -24,8 +24,8 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 
 
-
-3. Importer la base de donnée [SQL](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/docs/SQL/offre_stage_inverse.sql)
+3. Créer une base de donnée nommée : ``stageynov``
+4. Importer la base de donnée [SQL](https://raw.githubusercontent.com/MrZyr0/plateformeStageYnov/master/docs/SQL/offre_stage_inverse.sql)
 
 
 

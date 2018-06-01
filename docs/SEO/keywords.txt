@@ -1,0 +1,175 @@
+Liste de mots clé, référencement naturel SEO ptojet transversal:
+
+stage
+lyon
+ynov
+campus
+stagiaire
+alternant
+recrutement
+étudiant
+élève
+alternance
+
+Ingesup:
+informatique
+web
+réseau
+entreprise
+professionel
+rhône
+développeur
+système
+réseau
+développement
+sécurité
+cyber-securité
+ingénieur
+Chef de projet web
+Expert en developpement mobile et iot
+Expert cloud sécurité et réseaux
+Data Scientist
+Expert cyber sécurité
+Administrateur d’infrastructures
+Responsable des études
+Chargé des méthodes outils et qualité
+Chef de projet production
+Responsable progiciel
+Administrateur systèmes
+Technicien poste de travail
+Technicien d’exploitation
+Consultant informatique
+Administrateur d’infrastructures
+Responsable des études
+Chargé des méthodes outils et qualité
+Chef de projet informatique
+Pilote d’exploitation
+Responsable sécurité des systèmes d’information (RSSI)
+Responsable du système d’information
+Architecte technique
+Pilote d’exploitation
+Administrateur de bases de données
+Responsable sécurité des systèmes d’information (RSSI)
+Technicien réseaux
+Gestionnaire de base de données
+Expert en sécurité informatique
+Consultant informatique
+Architecte réseaux
+Administrateur réseaux
+Consultant technique
+Analyste fonctionnel
+Chef de projet informatique
+Graphiste web / webgraphiste
+Intégrateur web
+Webdesigner
+Architecte web
+
+
+Digital business school:
+Chargé-e de communication
+Media planneur
+Technico-commercial-e
+Attaché-e Commercial-e
+Responsable commercial
+Consultant technique
+Chef de projet Ingénieur commercial web
+Consultant web analytique
+Consultant en référencement
+
+Web com et graphic design:
+Chef de projet
+Directeur artistique
+Graphiste web / webgraphiste
+Webdesigner
+
+Animation 3D, jeux vidéos:
+Story-boarder
+Directeur de post-production
+Chef de projet multimedia
+Character designer
+Animateur 2D et 3D
+Directeur artistique
+Illustrateur 2D et 3D
+Graphiste ou infographiste 2D et 3D
+Développeur
+
+Audiovisuel:
+Accessoiriste
+Scénographe
+Directeur de post-production
+
+
+URL:
+www.ynovlyon.com/recrutement
+www.ynovlyon.com/recrutement/profil
+
+
+ALTERNACE, CDI, CDD, STAGE... RECRUTEZ LE PROFIL DONT VOUS AVEZ BESOIN.
+
+
+
+PERSONNA:
+Frederic Pierrin
+Chef d'entreprise chez Fred'info
+45 ans
+2 enfants, marié
+Aisance numérique: très bonne
+Fréquence d'usage: quotidenne
+Il dirige une entreprise d'informatique qu'il a monté lui-même.
+Il cherche des alternants dans le domaine du développement logiciels.
+Il cherche des profils compétents (fin d'études), sérieux et assidus.
+contrats qui pourraient débouchés sur des embauches.
+Il a un diplôme d'expert en développement mobile.
+Il est passionné, investi et sportif.
+
+
+
+
+
+Balises:
+
+<meta/>
+<head> </head>
+<title></title>
+<description></description>
+
+<!--->
+<meta property= »og:type » content= »Article » />
+<meta property= »og:title » content= »Un titre de pas plus de 65 caractères » />
+<meta property= »og:description » content= »Vous pouvez utiliser une description de 156 caractères ici. »/>
+<meta property= »og:url » content= »URL de l’article ou de la page que vous partagez » />
+<meta property= »og:image » content= »URL de l’image que vous souhaitez afficher » />
+<meta property= »og:site_name » content= »Le nom de votre site » />
+<!---->
+
+<meta name ="description" content= "votre description en 155 caractères pour mettre en valeurs votre page"/>
+
+
+<!--/*<meta-keyword>*/-->
+<title></title>
+<meta-descrtption></meta-descrtption>
+<meta name="robots" content="index, follow"/>
+Dans la partie content, vous pouvez choisir entre index et noindex et follow/nofollow. Index et noindex indique au moteur de recherche si vous souhaitez que votre site
+apparaisse sur la page de résultats et follow et nofollow lui indique si vous souhaitez que les liens sur votre page soient suivis par le robot de Google (Google Bot).
+
+<div itemscope itemtype=”http://schema.org/Store”>
+<span itemprop=”name”>Nom du magasin</span>
+<div itemprop=”address” itemscope itemtype=”http://schema.org/PostalAddress”>
+<span itemprop=”streetAddress”>Numéro de la rue</span>
+<span itemprop=”addressLocality”>Ville</span>,
+<span itemprop=”addressRegion”>Département</span>
+<span itemprop=”postalCode”>Le code postal</span>
+<span itemprop=”telephone”>le numéro de telephone du magasin</span>
+<a href=”http://googlemapsurl.com” itemprop=”maps”>url de votre map</a>
+</div>
+
+
+• La métadonnée description est unique pour chaque page ; elle résume le contenu de celle-ci. Votre site web a
+donc autant de descriptions que de pages.
+• La métadonnée description est tronquée au-delà de 150 signes ; il est conseillé de la rédiger en évitant de
+dépasser ce seuil.
+• Chaque description doit inciter à l’action. Elle ne doit donc pas ressembler à une suite de mots mais plutôt
+mettre en avant les éléments différenciants de votre offre.
+• La description peut venir dialoguer avec le titre navigateur, c’est-à-dire compléter celui-ci. Elle apporte un
+complément d’information dans la mesure où le titre navigateur est limité à environ 60 signes.
+• La description peut contenir des mots-clés afin de jouer sur leur mise en gras dans les pages de Google.
