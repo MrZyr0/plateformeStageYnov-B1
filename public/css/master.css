@@ -1,33 +1,27 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
 }
 
-b
-{
+b {
     font-weight: normal;
 }
 
-em
-{
+em {
     font-style: normal;
 }
 
-@font-face
-{
+@font-face {
     font-family: "Montserrat";
     src: url("/font/montserrat/ttf/Montserrat-Regular.ttf");
 }
 
-@font-face
-{
+@font-face {
     font-family: "MontSerratBlack";
     src: url("/font/montserrat/ttf/Montserrat-Black.ttf");
 }
 
-.nav
-{
+.nav {
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
@@ -39,40 +33,35 @@ em
     top: 0px;
     z-index: 3;
     width: -webkit-fill-available;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.5) 100%), no-repeat;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%), no-repeat;
     width: -webkit-fill-available;
 }
 
-.nav__logo
-{
-        width: 170px;
+.nav__logo {
+    width: 170px;
 }
 
-.nav a
-{
+.nav a {
     text-decoration: none;
     color: white;
-    font-family: MontSerratBlack,serif,"Montserrat", "Helvetica", "Arial", sans-serif;
+    font-family: MontSerratBlack, serif, "Montserrat", "Helvetica", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
 }
 
-.nav__menu
-{
+.nav__menu {
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-width: 800px;
 }
 
-.nav__menu__canditate
-{
+.nav__menu__canditate {
     padding: 12px 20px;
-    background-color: rgba(0,160,147);
+    background-color: rgba(0, 160, 147);
     border-radius: 25px;
 }
 
-.footer
-{
+.footer {
     width: 100%;
 }

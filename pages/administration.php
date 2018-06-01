@@ -2,8 +2,8 @@
 require_once($_SESSION["RacineServ"] . '/src/php/lienbdd.php');
 
 $statement = $connection->prepare("
-    INSERT INTO `osi_offer` (`id`, `title`, `type`, `class`, `description`, `period`, `from_date`, `to_date`, `categorie`) VALUES (NULL, 'Développeur java', 'Stage', '3ème année Informatique', '## Description\r\n\r\nLes étudiants de première année cherchent un stage. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.\r\n\r\n## Compétences acquises\r\n\r\nLes étudiants ont réalisé un **projet transvesal**. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus feugiat fermentum gravida. In eleifend venenatis dui, ut congue nisi ullamcorper ut. Nunc gravida rhoncus volutpat. In pharetra maximus purus quis elementum. Sed commodo auctor metus quis semper. Pellentesque sagittis condimentum massa ut rhoncus. Pellentesque luctus dignissim velit, eu malesuada tortor tristique eget. Fusce eget tempus orci.', '5 mois', '2018-05-25', '2018-10-18', 'informatique')
-");
+    INSERT INTO `osi_offer` (`id`, `title`, `type`, `class`, `period`, `from_date`, `to_date`, `categorie`, `description`)
+    VALUES ($_POST[id], $_POST[title], $_POST[type], $_POST[class], $_POST[period], $_POST[from_date], $_POST[to_date], $_POST[categorie], $_POST[description]");
 $statement->execute();
 ?>
 <!DOCTYPE html>
@@ -13,6 +13,27 @@ $statement->execute();
     <title>Administration</title>
 </head>
 <body>
-    <h1>Bienvenu sur la page d'admin</h1>
+<form method="post" action="">
+    <input type="number" name="id" placeholder="id" >
+    <br/>
+    <input type="text" name="title" placeholder="Titre" required>
+    <br/>
+    <input type="text" name="type" placeholder="Type" required>
+    <br/>
+    <input type="text" name="class" placeholder="Classe" required>
+    <br/>
+    <input type="text" name="period" placeholder="Période" required>
+    <br/>
+    <input type="date" name="from_date" placeholder="Du" required>
+    <br/>
+    <input type="date" name="to_date" placeholder="Au" required>
+    <br/>
+    <input type="text" name="categorie" placeholder="Catégorie" required>
+    <br/>
+    <textarea style="resize: none" name="description" rows="10" cols="50" placeholder="Description de l'offre:" required>
+    </textarea>
+    <br>
+    <input type="submit" value="Envoyer"/>
+</form>
 </body>
 </html>
