@@ -3,7 +3,8 @@
 ## Description
 
 Dans le cadre du dernier projet de l'année 2017-2018, l'école **Ynov Campus de Lyon** demande aux étudiant **IngéSup** de première année (**B1**) de créer une plateforme **d'offres de stage inversées** qui aidera les entreprises à trouver des profils de stagiaire ou d'alternant chez **Ynov**.
-Plutôt que de demander aux entreprises de soumettre des offres de stages qui sont transmises aux étudiants, elles auront directement accès à une liste de profil disponibles (ex : Stagiaire B1 en développement web) avec un descriptif des compétences acquises par les étudiants dans le **Campus d'Ynov Lyon**.
+Plutôt que de demander aux entreprises de soumettre des offres de stages qui sont transmises aux étudiants, elles auront directement accès à une liste de profil disponibles (ex : Stagiaire B1 en développement web) avec un descriptif des compétences acquises par les étudiants dans le **Campus d'Ynov Lyon**.
+
 Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le site le plus abouti et adapté au cahier des charges se vérra intégré au site du [Campus Ynov de Lyon](http://ynovlyon.com).
 
 
@@ -46,5 +47,5 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 ## Liens utiles
 
-* [Trello](https://trello.com/b/97WtxYfl/plateformestageynov)
+* [Trello](https://trello.com/b/97WtxYfl/plateformestageynov) _**Fermé**_
 * [Charte graphique d'Ynov](https://brand.ynov.com)
