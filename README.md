@@ -47,5 +47,5 @@ Toute la classe des **B1** sont mobilisés en en concurence par groupe de 3. Le 
 
 ## Liens utiles
 
-* [Trello](https://trello.com/b/97WtxYfl/plateformestageynov) _**Fermé**_ <p style="color: red"> trzf</p>
+* [Trello](https://trello.com/b/97WtxYfl/plateformestageynov) _**Fermé**_
 * [Charte graphique d'Ynov](https://brand.ynov.com)
